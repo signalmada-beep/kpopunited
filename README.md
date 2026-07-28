@@ -1,75 +1,127 @@
-# React + TypeScript + Vite
+# 🎵 K-POP UNITED
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**The Ultimate K-Pop Community Platform**
 
-Currently, two official plugins are available:
+[![GitHub license](https://img.shields.io/github/license/signalmada-beep/kpopunited)](https://github.com/signalmada-beep/kpopunited/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/signalmada-beep/kpopunited)](https://github.com/signalmada-beep/kpopunited/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/signalmada-beep/kpopunited)](https://github.com/signalmada-beep/kpopunited/network)
+[![GitHub issues](https://img.shields.io/github/issues/signalmada-beep/kpopunited)](https://github.com/signalmada-beep/kpopunited/issues)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📝 Description
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+K-POP UNITED est une plateforme sociale dédiée aux fans de K-Pop du monde entier. Connectez-vous avec d'autres fans, partagez votre passion, et restez informé des dernières nouvelles et événements de l'univers K-Pop.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✨ Fonctionnalités
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 🔐 Authentification
+- Inscription / Connexion avec Email et Mot de passe
+- Connexion avec Google OAuth
+- Réinitialisation du mot de passe
+- Vérification d'email
+- Session persistante
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 📝 Publications (Posts)
+- Création de posts avec texte, images et vidéos
+- Réactions (Like, Love, Haha, Wow, Sad, Angry, Stan, Bias, etc.)
+- Commentaires et réponses
+- Partage et sauvegarde de posts
+- Filtrage par catégorie (Artists, Groups, Events, Trending, Latest)
+- Algorithm "For You" personnalisé
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 💬 Messagerie
+- Messages en temps réel
+- Conversations individuelles et de groupe
+- Envoi d'images et de fichiers
+- Réactions aux messages
+- Statut en ligne / hors ligne
+- Notifications de messages
 
-```
+### 📸 Stories
+- Création de stories photo et texte
+- Visualisation de stories
+- Réactions et réponses
+- Stories éphémères (disparaissent après 24h)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 🎫 Événements
+- Création et gestion d'événements
+- Participation (Going / Interested)
+- Calendrier des événements K-Pop
+- Favoris et notifications
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 👥 Groupes
+- Création et gestion de groupes
+- Publications dans les groupes
+- Fandoms et communautés
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 👤 Profil
+- Photo de profil et photo de couverture
+- Bio et informations personnelles
+- Statistiques (posts, followers, following)
+- Badges de niveau (Fan, Légende, etc.)
+- Paramètres de confidentialité
 
-```
+### 🔔 Notifications
+- Notifications en temps réel
+- Likes, commentaires, mentions, follows
+- Événements et partages
+- Paramètres de notification personnalisables
+
+### 🌙 Thème
+- Mode sombre / clair
+- Système automatique
+
+### 📱 Responsive
+- Optimisé pour mobile, tablette et desktop
+- PWA (Progressive Web App) - installation possible
+
+---
+
+## 🛠️ Technologies
+
+### Frontend
+- **React 18** - Framework UI
+- **TypeScript** - Typage statique
+- **Vite** - Build tool
+- **CSS Vanilla** - Styles personnalisés
+- **Font Awesome** - Icônes
+
+### Backend & Services
+- **Firebase Authentication** - Gestion des utilisateurs
+- **Firestore** - Base de données NoSQL en temps réel
+- **Firebase Storage** - Stockage des images et fichiers
+- **Firebase Hosting** - Hébergement
+
+### Outils de développement
+- **ESLint** - Linting du code
+- **Git** - Versionnement
+
+---
+
+## 🚀 Installation
+
+### Prérequis
+- Node.js (v18 ou supérieur)
+- npm ou yarn
+- Git
+
+### Étapes d'installation
+
+```bash
+# 1. Cloner le projet
+git clone https://github.com/signalmada-beep/kpopunited.git
+cd kpopunited
+
+# 2. Installer les dépendances
+npm install
+
+# 3. Créer le fichier .env (copier depuis .env.example)
+cp .env.example .env
+
+# 4. Configurer les variables d'environnement (voir ci-dessous)
+
+# 5. Démarrer en mode développement
+npm run dev

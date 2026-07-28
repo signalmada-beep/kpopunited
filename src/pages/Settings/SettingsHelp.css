@@ -1,0 +1,88 @@
+/* ============================================================
+   SETTINGS HELP - STYLE
+   ============================================================ */
+
+.settings-help-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.settings-help-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+  text-align: left;
+}
+
+.settings-help-item:hover {
+  background: var(--bg-hover);
+}
+
+.settings-help-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(192, 132, 252, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--kpop-violet);
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.settings-help-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.settings-help-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.settings-help-desc {
+  font-size: 11px;
+  color: var(--text-tertiary);
+}
+
+.settings-help-item i:last-child {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.settings-help-item:hover i:last-child {
+  color: var(--text-tertiary);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .settings-help-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* LIGHT MODE */
+body.light-mode .settings-help-item {
+  background: var(--bg-input);
+  border-color: var(--border-color);
+}
+body.light-mode .settings-help-item:hover {
+  background: var(--bg-hover);
+}
+body.light-mode .settings-help-label {
+  color: var(--text-primary);
+}
+body.light-mode .settings-help-desc {
+  color: var(--text-tertiary);
+}

@@ -1,0 +1,129 @@
+/* ============================================================
+   POST DETAILS PAGE
+   ============================================================ */
+
+.post-details-page {
+  padding: 16px 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: #0A0A0F;
+}
+
+.post-details-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  transition: all 0.2s ease;
+  margin-bottom: 16px;
+}
+
+.post-details-back:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+}
+
+.post-details-container {
+  background: rgba(20, 20, 29, 0.6);
+  backdrop-filter: blur(16px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  overflow: hidden;
+}
+
+/* LOADING */
+.post-details-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  gap: 16px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.loading-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid rgba(255, 255, 255, 0.04);
+  border-top-color: #C084FC;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* NOT FOUND */
+.post-details-notfound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+
+.post-details-notfound i {
+  font-size: 48px;
+  color: rgba(255, 255, 255, 0.06);
+}
+
+.post-details-notfound h3 {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+.post-details-notfound p {
+  font-size: 14px;
+  margin: 0;
+  max-width: 300px;
+}
+
+.post-details-notfound button {
+  padding: 8px 24px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #C084FC, #EC4899);
+  border: none;
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.post-details-notfound button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 20px rgba(192, 132, 252, 0.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .post-details-page {
+    padding: 12px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .post-details-page {
+    padding: 8px 8px;
+  }
+  
+  .post-details-back {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}

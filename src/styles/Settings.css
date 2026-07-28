@@ -1,0 +1,1054 @@
+/* ============================================================
+   SETTINGS - STYLE GLOBAL AVEC RESPONSIVE
+   ============================================================ */
+
+.settings-page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 20px;
+  overflow: hidden;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.settings-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+  flex-shrink: 0;
+}
+
+.settings-back {
+  background: none;
+  border: none;
+  color: var(--text-tertiary);
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.settings-back:hover {
+  color: var(--text-primary);
+  background: var(--bg-hover);
+}
+
+.settings-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* ============================================================
+   CONTAINER - MENU + CONTENT
+   ============================================================ */
+.settings-container {
+  display: flex;
+  flex: 1;
+  gap: 20px;
+  overflow: hidden;
+  padding-top: 12px;
+}
+
+/* ============================================================
+   MENU GAUCHE
+   ============================================================ */
+.settings-menu {
+  width: 280px;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.settings-menu-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-right: 4px;
+}
+
+.settings-menu-list::-webkit-scrollbar {
+  width: 3px;
+}
+
+.settings-menu-list::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 100px;
+}
+
+.settings-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: transparent;
+  border: none;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  font-family: inherit;
+  text-align: left;
+}
+
+.settings-menu-item:hover {
+  background: var(--bg-hover);
+  color: var(--text-secondary);
+}
+
+.settings-menu-item.active {
+  background: rgba(192, 132, 252, 0.06);
+  color: var(--text-primary);
+}
+
+.settings-menu-item i:first-child {
+  width: 20px;
+  font-size: 16px;
+  color: var(--text-tertiary);
+  flex-shrink: 0;
+}
+
+.settings-menu-item.active i:first-child {
+  color: var(--kpop-violet);
+}
+
+.settings-menu-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.settings-menu-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.settings-menu-desc {
+  display: block;
+  font-size: 10px;
+  color: var(--text-dim);
+}
+
+.settings-menu-item.active .settings-menu-desc {
+  color: var(--text-muted);
+}
+
+.settings-menu-badge {
+  padding: 0 8px;
+  border-radius: 30px;
+  background: var(--kpop-rose);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.settings-menu-item i:last-child {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.settings-menu-item:hover i:last-child {
+  color: var(--text-tertiary);
+}
+
+/* ============================================================
+   LOGOUT BUTTON
+   ============================================================ */
+.settings-logout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 8px;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(239, 68, 68, 0.06);
+  border: 1px solid rgba(239, 68, 68, 0.08);
+  color: var(--kpop-red);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.settings-logout:hover {
+  background: rgba(239, 68, 68, 0.12);
+}
+
+/* ============================================================
+   CONTENT (DROITE)
+   ============================================================ */
+.settings-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 4px 16px 0;
+}
+
+.settings-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.settings-content::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 100px;
+}
+
+/* ============================================================
+   SUBPAGE (contenu des pages settings)
+   ============================================================ */
+.settings-subpage {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.settings-subpage-header h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.settings-subpage-header p {
+  font-size: 14px;
+  color: var(--text-tertiary);
+  margin: 2px 0 0;
+}
+
+/* ============================================================
+   FORMULAIRES
+   ============================================================ */
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 4px 0;
+}
+
+.settings-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.settings-form-group label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.settings-form-group input,
+.settings-form-group textarea,
+.settings-form-group select {
+  padding: 10px 14px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  color: var(--text-primary);
+  font-size: 14px;
+  outline: none;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.settings-form-group input:focus,
+.settings-form-group textarea:focus,
+.settings-form-group select:focus {
+  border-color: var(--kpop-violet);
+  box-shadow: 0 0 0 3px rgba(192, 132, 252, 0.04);
+}
+
+.settings-form-group input:disabled,
+.settings-form-group textarea:disabled,
+.settings-form-group select:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.settings-char-count {
+  font-size: 10px;
+  color: var(--text-dim);
+  text-align: right;
+}
+
+.settings-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.settings-form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-color);
+}
+
+/* ============================================================
+   BOUTONS
+   ============================================================ */
+.settings-cancel-btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  color: var(--text-tertiary);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.settings-cancel-btn:hover {
+  background: var(--bg-hover);
+}
+
+.settings-edit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(192, 132, 252, 0.06);
+  border: 1px solid rgba(192, 132, 252, 0.06);
+  color: var(--kpop-violet);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.settings-edit-btn:hover {
+  background: rgba(192, 132, 252, 0.1);
+}
+
+.settings-save-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--gradient-primary);
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.settings-save-btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(192, 132, 252, 0.2);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.settings-footer {
+  text-align: center;
+  padding: 12px 0 0;
+  border-top: 1px solid var(--border-color);
+  flex-shrink: 0;
+}
+
+.settings-footer p {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin: 0;
+}
+
+.settings-version {
+  font-size: 11px;
+  color: var(--text-dim);
+  margin-top: 2px !important;
+}
+
+/* ============================================================
+   TOGGLE SWITCH
+   ============================================================ */
+.settings-toggle {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.settings-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.settings-toggle-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.settings-toggle-slider::before {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 3px;
+  bottom: 3px;
+  background: var(--text-tertiary);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.settings-toggle input:checked + .settings-toggle-slider {
+  background: var(--gradient-primary);
+  border-color: transparent;
+}
+
+.settings-toggle input:checked + .settings-toggle-slider::before {
+  transform: translateX(20px);
+  background: #fff;
+}
+
+/* ============================================================
+   RANGE SLIDER
+   ============================================================ */
+.settings-range-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 6px;
+}
+
+.settings-range {
+  flex: 1;
+  height: 4px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: var(--bg-input);
+  border-radius: 100px;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.settings-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  cursor: pointer;
+  border: 2px solid var(--bg-primary);
+  box-shadow: 0 2px 8px rgba(192, 132, 252, 0.2);
+}
+
+.settings-range::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  cursor: pointer;
+  border: 2px solid var(--bg-primary);
+}
+
+.settings-range-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--kpop-violet);
+  min-width: 28px;
+  text-align: center;
+}
+
+/* ============================================================
+   THEME OPTIONS
+   ============================================================ */
+.settings-theme-options {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.settings-theme-option {
+  flex: 1;
+  min-width: 80px;
+  padding: 12px;
+  border-radius: 12px;
+  background: var(--bg-input);
+  border: 2px solid var(--border-color);
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+  font-family: inherit;
+  color: var(--text-tertiary);
+  position: relative;
+}
+
+.settings-theme-option:hover {
+  background: var(--bg-hover);
+}
+
+.settings-theme-option.active {
+  border-color: var(--kpop-violet);
+  background: rgba(192, 132, 252, 0.04);
+  color: var(--text-primary);
+}
+
+.settings-theme-preview {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 6px;
+  font-size: 20px;
+}
+
+.settings-theme-preview.dark {
+  background: #1A1A2E;
+  color: #C084FC;
+}
+
+.settings-theme-preview.light {
+  background: #f0f0f0;
+  color: #1A1A2E;
+}
+
+.settings-theme-preview.system {
+  background: linear-gradient(135deg, #1A1A2E 50%, #f0f0f0 50%);
+  color: #C084FC;
+}
+
+.settings-theme-option span {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.settings-theme-check {
+  display: block;
+  margin-top: 4px;
+  color: var(--kpop-violet);
+  font-size: 14px;
+}
+
+/* ============================================================
+   RESPONSIVE - TABLETTE (1024px)
+   ============================================================ */
+@media (max-width: 1024px) {
+  .settings-menu {
+    width: 220px;
+    min-width: 220px;
+  }
+  
+  .settings-menu-desc {
+    display: none;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE - MOBILE (768px)
+   ============================================================ */
+@media (max-width: 768px) {
+  .settings-page {
+    padding: 12px 14px;
+  }
+
+  .settings-title {
+    font-size: 18px;
+  }
+
+  .settings-container {
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 8px;
+  }
+
+  /* 🔥 MENU devient horizontal */
+  .settings-menu {
+    width: 100%;
+    min-width: 100%;
+    max-height: 180px;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-shrink: 0;
+    padding: 0 0 4px 0;
+    scrollbar-width: none;
+  }
+
+  .settings-menu::-webkit-scrollbar {
+    display: none;
+  }
+
+  .settings-menu-list {
+    flex-direction: row;
+    gap: 4px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0 4px 4px 4px;
+    flex: 1;
+  }
+
+  .settings-menu-item {
+    flex-shrink: 0;
+    padding: 8px 14px;
+    gap: 8px;
+    white-space: nowrap;
+  }
+
+  .settings-menu-item i:last-child {
+    display: none;
+  }
+
+  .settings-menu-info {
+    white-space: nowrap;
+  }
+
+  .settings-menu-label {
+    font-size: 12px;
+  }
+
+  /* 🔥 Logout bouton afenina amin'ny menu, aseho any ambany */
+  .settings-logout {
+    display: none;
+  }
+
+  /* 🔥 Content */
+  .settings-content {
+    padding: 0;
+    overflow-y: auto;
+    flex: 1;
+  }
+
+  .settings-subpage-header h2 {
+    font-size: 17px;
+  }
+
+  .settings-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-form-actions {
+    flex-direction: column;
+  }
+
+  .settings-form-actions button {
+    width: 100%;
+  }
+
+  .settings-footer {
+    padding: 10px 0 0;
+  }
+
+  .settings-footer p {
+    font-size: 11px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE - PETIT MOBILE (480px)
+   ============================================================ */
+@media (max-width: 480px) {
+  .settings-page {
+    padding: 8px 10px;
+  }
+
+  .settings-title {
+    font-size: 16px;
+  }
+
+  .settings-back {
+    font-size: 16px;
+    padding: 2px 6px;
+  }
+
+  .settings-header {
+    padding-bottom: 8px;
+    gap: 10px;
+  }
+
+  .settings-container {
+    gap: 8px;
+    padding-top: 4px;
+  }
+
+  .settings-menu {
+    max-height: 150px;
+  }
+
+  .settings-menu-item {
+    padding: 6px 10px;
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  .settings-menu-item i:first-child {
+    font-size: 13px;
+    width: 16px;
+  }
+
+  .settings-menu-label {
+    font-size: 11px;
+  }
+
+  .settings-subpage-header h2 {
+    font-size: 15px;
+  }
+
+  .settings-subpage-header p {
+    font-size: 12px;
+  }
+
+  .settings-form-group input,
+  .settings-form-group textarea,
+  .settings-form-group select {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .settings-form-group label {
+    font-size: 10px;
+  }
+
+  .settings-save-btn,
+  .settings-edit-btn,
+  .settings-cancel-btn {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .settings-theme-options {
+    gap: 8px;
+  }
+
+  .settings-theme-option {
+    padding: 8px;
+    min-width: 60px;
+  }
+
+  .settings-theme-preview {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .settings-theme-option span {
+    font-size: 10px;
+  }
+
+  .settings-footer p {
+    font-size: 10px;
+  }
+
+  .settings-version {
+    font-size: 9px;
+  }
+
+  /* 🔥 Range slider */
+  .settings-range-wrapper {
+    gap: 10px;
+  }
+
+  .settings-range-value {
+    font-size: 14px;
+    min-width: 24px;
+  }
+
+  /* 🔥 Toggle */
+  .settings-toggle {
+    width: 38px;
+    height: 20px;
+  }
+
+  .settings-toggle-slider::before {
+    width: 14px;
+    height: 14px;
+    left: 2px;
+    bottom: 2px;
+  }
+
+  .settings-toggle input:checked + .settings-toggle-slider::before {
+    transform: translateX(18px);
+  }
+}
+
+/* ============================================================
+   RESPONSIVE - TRES PETIT (360px)
+   ============================================================ */
+@media (max-width: 360px) {
+  .settings-page {
+    padding: 4px 6px;
+  }
+
+  .settings-title {
+    font-size: 14px;
+  }
+
+  .settings-header {
+    gap: 6px;
+  }
+
+  .settings-back {
+    font-size: 14px;
+  }
+
+  .settings-menu {
+    max-height: 120px;
+  }
+
+  .settings-menu-item {
+    padding: 4px 8px;
+    font-size: 10px;
+    gap: 4px;
+  }
+
+  .settings-menu-item i:first-child {
+    font-size: 11px;
+    width: 14px;
+  }
+
+  .settings-menu-label {
+    font-size: 10px;
+  }
+
+  .settings-subpage-header h2 {
+    font-size: 13px;
+  }
+
+  .settings-subpage-header p {
+    font-size: 11px;
+  }
+
+  .settings-form-group input,
+  .settings-form-group textarea,
+  .settings-form-group select {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .settings-save-btn,
+  .settings-edit-btn,
+  .settings-cancel-btn {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .settings-theme-preview {
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+  }
+
+  .settings-footer p {
+    font-size: 9px;
+  }
+
+  .settings-range-value {
+    font-size: 12px;
+    min-width: 20px;
+  }
+
+  .settings-toggle {
+    width: 32px;
+    height: 18px;
+  }
+
+  .settings-toggle-slider::before {
+    width: 12px;
+    height: 12px;
+    left: 2px;
+    bottom: 2px;
+  }
+
+  .settings-toggle input:checked + .settings-toggle-slider::before {
+    transform: translateX(14px);
+  }
+}
+
+/* ============================================================
+   LIGHT MODE
+   ============================================================ */
+body.light-mode .settings-page {
+  background: var(--bg-primary);
+}
+
+body.light-mode .settings-title {
+  color: var(--text-primary);
+}
+
+body.light-mode .settings-back {
+  color: var(--text-tertiary);
+}
+
+body.light-mode .settings-back:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+body.light-mode .settings-menu-item {
+  color: var(--text-tertiary);
+}
+
+body.light-mode .settings-menu-item:hover {
+  background: var(--bg-hover);
+  color: var(--text-secondary);
+}
+
+body.light-mode .settings-menu-item.active {
+  background: rgba(139, 92, 246, 0.06);
+  color: var(--text-primary);
+}
+
+body.light-mode .settings-menu-item.active i:first-child {
+  color: var(--kpop-violet);
+}
+
+body.light-mode .settings-menu-item i:first-child {
+  color: var(--text-tertiary);
+}
+
+body.light-mode .settings-logout {
+  background: rgba(220, 38, 38, 0.04);
+  border-color: rgba(220, 38, 38, 0.06);
+}
+
+body.light-mode .settings-logout:hover {
+  background: rgba(220, 38, 38, 0.08);
+}
+
+body.light-mode .settings-subpage-header h2 {
+  color: var(--text-primary);
+}
+
+body.light-mode .settings-subpage-header p {
+  color: var(--text-tertiary);
+}
+
+body.light-mode .settings-form-group label {
+  color: var(--text-tertiary);
+}
+
+body.light-mode .settings-form-group input,
+body.light-mode .settings-form-group textarea,
+body.light-mode .settings-form-group select {
+  background: var(--bg-input);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+body.light-mode .settings-form-group input:focus,
+body.light-mode .settings-form-group textarea:focus,
+body.light-mode .settings-form-group select:focus {
+  border-color: var(--kpop-violet);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.04);
+}
+
+body.light-mode .settings-edit-btn {
+  background: rgba(139, 92, 246, 0.04);
+  color: var(--kpop-violet);
+}
+
+body.light-mode .settings-save-btn {
+  background: var(--gradient-primary);
+  color: #fff;
+}
+
+body.light-mode .settings-cancel-btn {
+  background: var(--bg-input);
+  border-color: var(--border-color);
+  color: var(--text-tertiary);
+}
+
+body.light-mode .settings-cancel-btn:hover {
+  background: var(--bg-hover);
+}
+
+body.light-mode .settings-footer p {
+  color: var(--text-dim);
+}
+
+body.light-mode .settings-theme-option {
+  background: var(--bg-input);
+  border-color: var(--border-color);
+  color: var(--text-tertiary);
+}
+
+body.light-mode .settings-theme-option:hover {
+  background: var(--bg-hover);
+}
+
+body.light-mode .settings-theme-option.active {
+  border-color: var(--kpop-violet);
+  background: rgba(139, 92, 246, 0.04);
+  color: var(--text-primary);
+}
+
+body.light-mode .settings-theme-preview.light {
+  background: #e8e8ee;
+  color: #1A1A2E;
+}
+
+body.light-mode .settings-theme-preview.system {
+  background: linear-gradient(135deg, #1A1A2E 50%, #e8e8ee 50%);
+}
+
+body.light-mode .settings-toggle-slider {
+  background: var(--bg-input);
+  border-color: var(--border-color);
+}
+
+body.light-mode .settings-toggle-slider::before {
+  background: var(--text-tertiary);
+}
+
+body.light-mode .settings-toggle input:checked + .settings-toggle-slider {
+  background: var(--gradient-primary);
+}
+
+body.light-mode .settings-range {
+  background: var(--bg-input);
+}
+
+body.light-mode .settings-range::-webkit-slider-thumb {
+  background: var(--gradient-primary);
+  border-color: var(--bg-primary);
+}
+
+body.light-mode .settings-range-value {
+  color: var(--kpop-violet);
+}

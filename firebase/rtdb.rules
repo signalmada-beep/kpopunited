@@ -1,0 +1,18 @@
+﻿{
+  "rules": {
+    "storyStats": {
+      "$storyId": {
+        ".read": true,
+        ".write": true,
+        "views": {
+          ".validate": "newData.isNumber()"
+        },
+        "reactions": {
+          "$emoji": {
+            ".validate": "newData.isNumber()"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+/* ============================================================
+   SETTINGS APPEARANCE - STYLE
+   ============================================================ */
+
+.settings-theme-options {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.settings-theme-option {
+  flex: 1;
+  min-width: 80px;
+  padding: 12px;
+  border-radius: 12px;
+  background: var(--bg-input);
+  border: 2px solid var(--border-color);
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+  font-family: inherit;
+  color: var(--text-tertiary);
+  position: relative;
+}
+
+.settings-theme-option:hover {
+  background: var(--bg-hover);
+}
+
+.settings-theme-option.active {
+  border-color: var(--kpop-violet);
+  background: rgba(192, 132, 252, 0.04);
+  color: var(--text-primary);
+}
+
+.settings-theme-preview {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 6px;
+  font-size: 20px;
+}
+
+.settings-theme-preview.dark {
+  background: #1A1A2E;
+  color: #C084FC;
+}
+
+.settings-theme-preview.light {
+  background: #f0f0f0;
+  color: #1A1A2E;
+}
+
+.settings-theme-preview.system {
+  background: linear-gradient(135deg, #1A1A2E 50%, #f0f0f0 50%);
+  color: #C084FC;
+}
+
+.settings-theme-option span {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.settings-theme-check {
+  display: block;
+  margin-top: 4px;
+  color: var(--kpop-violet);
+  font-size: 14px;
+}
+
+.settings-appearance-section {
+  margin-bottom: 16px;
+}
+
+.settings-appearance-section h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  margin: 0 0 8px 0;
+}
+
+.settings-appearance-section select {
+  width: 100%;
+  padding: 10px 14px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  color: var(--text-primary);
+  font-size: 14px;
+  outline: none;
+  font-family: inherit;
+}
+
+.settings-appearance-section select:focus {
+  border-color: var(--kpop-violet);
+}
+
+/* LIGHT MODE */
+body.light-mode .settings-theme-option {
+  background: var(--bg-input);
+  border-color: var(--border-color);
+  color: var(--text-tertiary);
+}
+body.light-mode .settings-theme-option:hover {
+  background: var(--bg-hover);
+}
+body.light-mode .settings-theme-option.active {
+  border-color: var(--kpop-violet);
+  background: rgba(139, 92, 246, 0.04);
+  color: var(--text-primary);
+}
+body.light-mode .settings-theme-preview.light {
+  background: #e8e8ee;
+  color: #1A1A2E;
+}
+body.light-mode .settings-theme-preview.system {
+  background: linear-gradient(135deg, #1A1A2E 50%, #e8e8ee 50%);
+}
+body.light-mode .settings-appearance-section select {
+  background: var(--bg-input);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}

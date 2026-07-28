@@ -1,0 +1,424 @@
+/* ============================================================
+   SETTINGS PROFILE - STYLE
+   ============================================================ */
+
+.settings-subpage {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.settings-subpage-header h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.settings-subpage-header p {
+  font-size: 14px;
+  color: var(--text-tertiary);
+  margin: 2px 0 0;
+}
+
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 4px 0;
+}
+
+.settings-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.settings-form-group label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.settings-form-group input,
+.settings-form-group textarea,
+.settings-form-group select {
+  padding: 10px 14px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  color: var(--text-primary);
+  font-size: 14px;
+  outline: none;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.settings-form-group input:focus,
+.settings-form-group textarea:focus,
+.settings-form-group select:focus {
+  border-color: var(--kpop-violet);
+  box-shadow: 0 0 0 3px rgba(192, 132, 252, 0.04);
+}
+
+.settings-form-group input:disabled,
+.settings-form-group textarea:disabled,
+.settings-form-group select:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.settings-char-count {
+  font-size: 10px;
+  color: var(--text-dim);
+  text-align: right;
+  margin-top: 2px;
+}
+
+.settings-form-hint {
+  font-size: 11px;
+  color: var(--text-tertiary);
+  margin-top: 2px;
+}
+
+.settings-form-link {
+  background: none;
+  border: none;
+  color: var(--kpop-violet);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 0 4px;
+  text-decoration: underline;
+}
+
+.settings-form-link:hover {
+  color: var(--kpop-rose);
+}
+
+.settings-form-disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.settings-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.settings-form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-color);
+}
+
+.settings-cancel-btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  color: var(--text-tertiary);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.settings-cancel-btn:hover {
+  background: var(--bg-hover);
+}
+
+.settings-edit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(192, 132, 252, 0.06);
+  border: 1px solid rgba(192, 132, 252, 0.06);
+  color: var(--kpop-violet);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.settings-edit-btn:hover {
+  background: rgba(192, 132, 252, 0.1);
+}
+
+.settings-save-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--gradient-primary);
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.settings-save-btn:hover:not(:disabled) {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(192, 132, 252, 0.2);
+}
+
+.settings-save-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.save-success-toast {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.12);
+  border-radius: 10px;
+  color: #10B981;
+  font-size: 13px;
+  margin-bottom: 12px;
+  animation: fadeIn 0.3s ease;
+}
+
+.save-success-toast i {
+  font-size: 16px;
+}
+
+.save-error-toast {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.12);
+  border-radius: 10px;
+  color: #EF4444;
+  font-size: 13px;
+  margin-bottom: 12px;
+  animation: shakeError 0.4s ease;
+}
+
+.save-error-toast i {
+  font-size: 16px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shakeError {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-8px); }
+  75% { transform: translateX(8px); }
+}
+
+.settings-profile-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 12px;
+  color: var(--text-tertiary);
+}
+
+.settings-profile-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 12px;
+  color: var(--text-tertiary);
+}
+
+.settings-profile-error i {
+  font-size: 36px;
+  color: var(--kpop-red);
+}
+
+.settings-profile-error button {
+  padding: 6px 20px;
+  border-radius: 30px;
+  background: var(--gradient-primary);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.loading-spinner {
+  width: 28px;
+  height: 28px;
+  border: 3px solid rgba(255,255,255,0.04);
+  border-top-color: var(--kpop-violet);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.spinner-small {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.2);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .settings-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-form-actions {
+    flex-direction: column;
+  }
+
+  .settings-form-actions button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .settings-subpage-header h2 {
+    font-size: 17px;
+  }
+
+  .settings-subpage-header p {
+    font-size: 12px;
+  }
+
+  .settings-form-group input,
+  .settings-form-group textarea,
+  .settings-form-group select {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .settings-form-group label {
+    font-size: 10px;
+  }
+
+  .settings-edit-btn,
+  .settings-save-btn,
+  .settings-cancel-btn {
+    font-size: 13px;
+    padding: 8px;
+  }
+}
+
+/* LIGHT MODE */
+body.light-mode .settings-subpage-header h2 {
+  color: var(--text-primary);
+}
+
+body.light-mode .settings-subpage-header p {
+  color: var(--text-tertiary);
+}
+
+body.light-mode .settings-form-group label {
+  color: var(--text-tertiary);
+}
+
+body.light-mode .settings-form-group input,
+body.light-mode .settings-form-group textarea,
+body.light-mode .settings-form-group select {
+  background: var(--bg-input);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+body.light-mode .settings-form-group input:focus,
+body.light-mode .settings-form-group textarea:focus,
+body.light-mode .settings-form-group select:focus {
+  border-color: var(--kpop-violet);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.04);
+}
+
+body.light-mode .settings-edit-btn {
+  background: rgba(139, 92, 246, 0.04);
+  color: var(--kpop-violet);
+}
+
+body.light-mode .settings-save-btn {
+  background: var(--gradient-primary);
+  color: #fff;
+}
+
+body.light-mode .settings-cancel-btn {
+  background: var(--bg-input);
+  border-color: var(--border-color);
+  color: var(--text-tertiary);
+}
+
+body.light-mode .settings-cancel-btn:hover {
+  background: var(--bg-hover);
+}
+
+body.light-mode .settings-form-hint {
+  color: var(--text-tertiary);
+}
+
+body.light-mode .settings-form-link {
+  color: var(--kpop-violet);
+}
+
+body.light-mode .settings-form-link:hover {
+  color: var(--kpop-rose);
+}
+
+body.light-mode .settings-char-count {
+  color: var(--text-dim);
+}
+
+body.light-mode .settings-form-disabled {
+  opacity: 0.6;
+}
+
+body.light-mode .save-success-toast {
+  background: rgba(5, 150, 105, 0.06);
+  border-color: rgba(5, 150, 105, 0.08);
+  color: #059669;
+}
+
+body.light-mode .save-error-toast {
+  background: rgba(220, 38, 38, 0.06);
+  border-color: rgba(220, 38, 38, 0.08);
+  color: #DC2626;
+}

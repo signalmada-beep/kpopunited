@@ -1,0 +1,12 @@
+﻿# Uploads
+uploads/
+!uploads/.gitkeep
+
+# Node
+node_modules/
+
+# Env
+.env
+
+# Logs
+*.log

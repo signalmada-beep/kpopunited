@@ -1,0 +1,430 @@
+/* ============================================================
+   LEFT SIDEBAR - DESKTOP IHANY (FORCER MIHAKATRA ENY AMBONY)
+   ============================================================ */
+
+/* ============================================================
+   SIDEBAR PRINCIPAL - FORCER MIHAKATRA ENY AMBONY
+   ============================================================ */
+.left-sidebar-premium {
+  width: 220px;
+  min-width: 220px;
+  height: 100vh;
+  height: 100dvh;
+  background: var(--bg-secondary, #14141D);
+  padding: 0;
+  overflow: hidden;
+  border-right: 1px solid var(--border-color, rgba(255, 255, 255, 0.04));
+  display: flex !important;
+  flex-direction: column;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  flex-shrink: 0;
+  margin: 0 !important;
+  z-index: 100;
+  transform: translateX(0) !important;
+  will-change: transform;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* ============================================================
+   HEADER SPACER - AFENINA FA MISY HATRANY (tsy ilaina intsony)
+   ============================================================ */
+.left-sidebar-premium .header-spacer {
+  display: none !important;
+}
+
+/* ============================================================
+   SCROLL CONTAINER - Mameno ny espace rehetra
+   ============================================================ */
+.left-sidebar-premium .scroll-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  overflow: hidden;
+  min-height: 0;
+  padding-top: 72px;
+}
+
+/* ============================================================
+   SCROLL CONTENT
+   ============================================================ */
+.left-sidebar-premium .scroll-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  overflow-y: auto;
+  padding: 4px 12px 6px 12px;
+  min-height: 0;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.06) transparent;
+  margin: 0;
+}
+
+.left-sidebar-premium .scroll-content::-webkit-scrollbar {
+  width: 3px;
+}
+
+.left-sidebar-premium .scroll-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.left-sidebar-premium .scroll-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 100px;
+}
+
+.left-sidebar-premium .scroll-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(192, 132, 252, 0.15);
+}
+
+/* ============================================================
+   SECTIONS
+   ============================================================ */
+.left-sidebar-premium .section-label {
+  font-size: 9px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.12);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 6px 0 3px 8px;
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.left-sidebar-premium .section-spacer {
+  flex: 1 1 0;
+  min-height: 0;
+}
+
+/* ============================================================
+   NAV ITEMS - COMPACT SY TSARA
+   ============================================================ */
+.left-sidebar-premium .nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 7px 12px;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  position: relative;
+  flex-shrink: 0;
+  margin: 1px 0;
+}
+
+.left-sidebar-premium .nav-item:hover {
+  background: rgba(255, 255, 255, 0.04);
+  color: #FFFFFF;
+}
+
+.left-sidebar-premium .nav-item:active {
+  transform: scale(0.97);
+  background: rgba(192, 132, 252, 0.08);
+}
+
+.left-sidebar-premium .nav-item.active {
+  background: rgba(192, 132, 252, 0.06);
+  color: #FFFFFF;
+}
+
+.left-sidebar-premium .nav-item .nav-icon {
+  width: 18px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.2);
+  transition: color 0.2s;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.left-sidebar-premium .nav-item.active .nav-icon {
+  color: #C084FC;
+}
+
+.left-sidebar-premium .nav-item .active-bar {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 24px;
+  background: linear-gradient(135deg, #C084FC, #EC4899);
+  border-radius: 0 4px 4px 0;
+}
+
+.left-sidebar-premium .nav-item span {
+  flex: 1;
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.left-sidebar-premium .nav-item .nav-badge {
+  margin-left: auto;
+  background: #EC4899;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   CREATE POST BUTTON - COMPACT
+   ============================================================ */
+.left-sidebar-premium .create-btn {
+  margin-top: 6px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  background: rgba(192, 132, 252, 0.08);
+  border: 1px solid rgba(192, 132, 252, 0.06);
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  font-family: inherit;
+  flex-shrink: 0;
+}
+
+.left-sidebar-premium .create-btn:hover {
+  background: rgba(192, 132, 252, 0.15);
+  transform: translateY(-1px);
+}
+
+.left-sidebar-premium .create-btn:active {
+  transform: scale(0.97);
+}
+
+.left-sidebar-premium .create-btn .create-icon {
+  color: #C084FC;
+  font-size: 15px;
+}
+
+.left-sidebar-premium .create-btn span {
+  flex: 1;
+  font-size: 13px;
+}
+
+/* ============================================================
+   USER SECTION - FARANY AMBANY (HITA TSARA)
+   ============================================================ */
+.left-sidebar-premium .user-section {
+  padding: 8px 8px 10px 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  flex-shrink: 0;
+  background: var(--bg-secondary, #14141D);
+  margin: 0;
+  min-height: 56px;
+}
+
+.left-sidebar-premium .user-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.left-sidebar-premium .user-item:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.left-sidebar-premium .user-item:active {
+  transform: scale(0.97);
+}
+
+.left-sidebar-premium .user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 2px solid rgba(192, 132, 252, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-sidebar-premium .user-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ============================================================
+   AVATAR PLACEHOLDER - TSY MAMPISY SARY IVELANY
+   ============================================================ */
+.left-sidebar-premium .user-avatar .avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(192, 132, 252, 0.15), rgba(236, 72, 153, 0.1));
+  border-radius: 50%;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.left-sidebar-premium .user-avatar .avatar-placeholder i {
+  font-size: 14px;
+}
+
+.left-sidebar-premium .user-avatar.no-avatar img {
+  display: none !important;
+}
+
+.left-sidebar-premium .user-avatar.no-avatar .avatar-placeholder {
+  display: flex !important;
+}
+
+.left-sidebar-premium .user-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.left-sidebar-premium .user-name {
+  font-weight: 600;
+  color: #FFFFFF;
+  font-size: 14px;
+  display: block;
+  line-height: 1.3;
+}
+
+.left-sidebar-premium .user-status {
+  font-size: 11px;
+  color: #4CAF50;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.left-sidebar-premium .user-status .online-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4CAF50;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+}
+
+/* ============================================================
+   BOUTON FERMER - AFENINA (tsy ilaina amin'ny desktop)
+   ============================================================ */
+.left-sidebar-premium .left-sidebar-close-btn {
+  display: none !important;
+}
+
+/* ============================================================
+   OVERLAY - AFENINA (tsy ilaina amin'ny desktop)
+   ============================================================ */
+.left-sidebar-overlay {
+  display: none !important;
+}
+
+/* ============================================================
+   LIGHT MODE
+   ============================================================ */
+body.light-mode .left-sidebar-premium {
+  background: #FFFFFF !important;
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+body.light-mode .left-sidebar-premium .nav-item {
+  color: rgba(0, 0, 0, 0.35);
+}
+
+body.light-mode .left-sidebar-premium .nav-item:hover {
+  background: rgba(0, 0, 0, 0.03);
+  color: #1A1A2E;
+}
+
+body.light-mode .left-sidebar-premium .nav-item.active {
+  background: rgba(139, 92, 246, 0.06);
+  color: #1A1A2E;
+}
+
+body.light-mode .left-sidebar-premium .nav-item.active .nav-icon {
+  color: #8B5CF6;
+}
+
+body.light-mode .left-sidebar-premium .nav-item .nav-icon {
+  color: rgba(0, 0, 0, 0.15);
+}
+
+body.light-mode .left-sidebar-premium .user-name {
+  color: #1A1A2E;
+}
+
+body.light-mode .left-sidebar-premium .user-item:hover {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+body.light-mode .left-sidebar-premium .user-section {
+  border-color: rgba(0, 0, 0, 0.06);
+  background: #FFFFFF !important;
+}
+
+body.light-mode .left-sidebar-premium .create-btn {
+  background: rgba(139, 92, 246, 0.06);
+  color: #1A1A2E;
+}
+
+body.light-mode .left-sidebar-premium .create-btn:hover {
+  background: rgba(139, 92, 246, 0.12);
+}
+
+body.light-mode .left-sidebar-premium .create-btn .create-icon {
+  color: #8B5CF6;
+}
+
+body.light-mode .left-sidebar-premium .section-label {
+  color: rgba(0, 0, 0, 0.10);
+}
+
+body.light-mode .left-sidebar-premium .scroll-content::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+body.light-mode .left-sidebar-premium .scroll-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.15);
+}
+
+body.light-mode .left-sidebar-premium .user-avatar {
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+body.light-mode .left-sidebar-premium .user-avatar .avatar-placeholder {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.05));
+  color: rgba(0, 0, 0, 0.2);
+}

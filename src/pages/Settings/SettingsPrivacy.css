@@ -1,0 +1,90 @@
+/* ============================================================
+   SETTINGS PRIVACY - STYLE
+   ============================================================ */
+
+.settings-privacy-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  margin-bottom: 2px;
+}
+
+.settings-privacy-item.toggle {
+  padding: 8px 14px;
+}
+
+.settings-privacy-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.settings-privacy-label {
+  display: block;
+  font-size: 13px;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.settings-privacy-desc {
+  font-size: 11px;
+  color: var(--text-tertiary);
+}
+
+.settings-privacy-item select {
+  padding: 4px 12px;
+  border-radius: 8px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-size: 12px;
+  outline: none;
+  font-family: inherit;
+}
+
+.settings-blocked-list {
+  padding: 12px;
+  border-radius: 10px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.settings-blocked-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-tertiary);
+}
+
+.settings-blocked-empty i {
+  font-size: 24px;
+}
+
+/* LIGHT MODE */
+body.light-mode .settings-privacy-item {
+  background: var(--bg-input);
+  border-color: var(--border-color);
+}
+body.light-mode .settings-privacy-label {
+  color: var(--text-primary);
+}
+body.light-mode .settings-privacy-desc {
+  color: var(--text-tertiary);
+}
+body.light-mode .settings-privacy-item select {
+  background: var(--bg-input);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+body.light-mode .settings-blocked-list {
+  background: var(--bg-input);
+  border-color: var(--border-color);
+}
+body.light-mode .settings-blocked-empty {
+  color: var(--text-tertiary);
+}

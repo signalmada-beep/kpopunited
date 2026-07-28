@@ -1,0 +1,408 @@
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\.gitignore
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\eslint.config.js
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\index.html
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\package-lock.json
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\package.json
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\README.md
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\tsconfig.app.json
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\tsconfig.json
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\tsconfig.node.json
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\vite.config.ts
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\public\favicon.svg
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\public\icons.svg
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\App.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\App.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\combined_code.txt
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\index.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\main.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\structure.txt
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\assets\hero.png
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\assets\logo.png
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\assets\react.svg
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\assets\vite.svg
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\components\BottomNavigation.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\components\CreatePost.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\components\Feed.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\components\Header.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\components\Layout.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\components\LeftSidebar.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\components\Navbar.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\components\Navigation.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\components\Post.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\components\PostCard.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\components\QuickComposer.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\components\RightSidebar.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\components\SearchBar.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\components\Sidebar.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\components\StoryCreator.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\components\StoryViewer.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\data\mockData.ts
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\hooks\useLocalStorage.ts
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\layout\LeftSidebar.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\layout\MainLayout.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\layout\RightSidebar.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\pages\Artists.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\pages\Auth.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\pages\Auth.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\pages\Communities.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\pages\Community.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\pages\CreatePost.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\pages\Events.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\pages\Explore.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\pages\Explore.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\pages\Groups.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\pages\Home.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\pages\Home.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\pages\Messages.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\pages\News.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\pages\Notifications.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\pages\PostDetails.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\pages\Profile.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\pages\Search.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\pages\Settings.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\pages\Splash.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\pages\Trending.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\pages\Videos.tsx
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\App.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\Artists.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\Auth.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\BottomNavigation.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\Communities.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\Community.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\CreatePost.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\dark.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\Events.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\Explore.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\Feed.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\global.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\Groups.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\Header.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\Home.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\LeftSidebar.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\MainLayout.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\Messages.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\News.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\Notifications.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\Post.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\PostCard.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\PostDetails.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\Profile.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\QuickComposer.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\Responsive.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\RightSidebar.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\Search.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\SearchBar.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\Settings.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\Sidebar.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\Splash.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\StoryCreator.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\StoryViewer.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\Trending.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\Variables.css
+
+
+
+### FILE: C:\Users\ss\Documents\PRESENTATION\projet\src\styles\Videos.css
+

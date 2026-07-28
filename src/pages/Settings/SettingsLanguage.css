@@ -1,0 +1,67 @@
+/* ============================================================
+   SETTINGS LANGUAGE - STYLE
+   ============================================================ */
+
+.settings-language-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.settings-language-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--bg-input);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+  color: var(--text-tertiary);
+}
+
+.settings-language-item:hover {
+  background: var(--bg-hover);
+}
+
+.settings-language-item.active {
+  background: rgba(192, 132, 252, 0.04);
+  border-color: rgba(192, 132, 252, 0.08);
+  color: var(--text-primary);
+}
+
+.settings-language-flag {
+  font-size: 24px;
+}
+
+.settings-language-name {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.settings-language-code {
+  font-size: 11px;
+  color: var(--text-tertiary);
+}
+
+.settings-language-check {
+  color: var(--kpop-violet);
+  font-size: 16px;
+}
+
+/* LIGHT MODE */
+body.light-mode .settings-language-item {
+  background: var(--bg-input);
+  color: var(--text-tertiary);
+}
+body.light-mode .settings-language-item:hover {
+  background: var(--bg-hover);
+}
+body.light-mode .settings-language-item.active {
+  background: rgba(139, 92, 246, 0.04);
+  border-color: rgba(139, 92, 246, 0.08);
+  color: var(--text-primary);
+}

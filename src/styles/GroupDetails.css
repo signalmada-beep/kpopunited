@@ -1,0 +1,370 @@
+/* ============================================================
+   GROUP DETAILS PAGE - PREMIUM
+   ============================================================ */
+
+.group-details-page {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #0A0A0F;
+  padding-bottom: 20px;
+}
+
+.group-details-page::-webkit-scrollbar {
+  width: 4px;
+}
+
+.group-details-page::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 100px;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.group-details-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: rgba(10, 10, 15, 0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px;
+  transition: color 0.2s;
+}
+
+.back-btn:hover {
+  color: #FFFFFF;
+}
+
+.group-details-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.group-details-actions {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px;
+  transition: color 0.2s;
+}
+
+.group-details-actions:hover {
+  color: #FFFFFF;
+}
+
+/* ============================================================
+   COVER
+   ============================================================ */
+.group-cover {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.group-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.group-cover-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.group-cover-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.group-cover-fandom {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+.group-join-btn {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  padding: 8px 24px;
+  border-radius: 100px;
+  background: linear-gradient(135deg, #C084FC, #EC4899);
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.group-join-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 20px rgba(192, 132, 252, 0.2);
+}
+
+.group-join-btn.joined {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ============================================================
+   INFO
+   ============================================================ */
+.group-info-section {
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.group-description p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+  margin: 0 0 12px 0;
+}
+
+.group-stats {
+  display: flex;
+  gap: 24px;
+}
+
+.group-stat {
+  text-align: center;
+}
+
+.stat-value {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* ============================================================
+   POSTS
+   ============================================================ */
+.group-posts-section {
+  padding: 12px 20px;
+}
+
+.group-posts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.group-posts-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.group-posts-header h3 i {
+  color: #C084FC;
+  margin-right: 6px;
+}
+
+.create-post-btn {
+  padding: 6px 16px;
+  border-radius: 100px;
+  background: linear-gradient(135deg, rgba(192, 132, 252, 0.12), rgba(236, 72, 153, 0.08));
+  border: 1px solid rgba(192, 132, 252, 0.08);
+  color: #C084FC;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: inherit;
+}
+
+.create-post-btn:hover {
+  background: linear-gradient(135deg, rgba(192, 132, 252, 0.2), rgba(236, 72, 153, 0.12));
+}
+
+/* ============================================================
+   POST
+   ============================================================ */
+.group-post {
+  background: #14141D;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+}
+
+.group-post-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.group-post-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.group-post-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.group-post-author {
+  display: flex;
+  flex-direction: column;
+}
+
+.group-post-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.group-post-time {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.15);
+}
+
+.group-post-content {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin: 4px 0 8px;
+}
+
+.group-post-actions {
+  display: flex;
+  gap: 12px;
+  padding-top: 6px;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.group-post-action {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s;
+}
+
+.group-post-action:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.group-post-action i {
+  font-size: 13px;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+  .group-cover {
+    height: 150px;
+  }
+
+  .group-cover-name {
+    font-size: 20px;
+  }
+
+  .group-info-section {
+    padding: 12px 16px;
+  }
+
+  .group-posts-section {
+    padding: 10px 16px;
+  }
+
+  .group-stats {
+    gap: 16px;
+  }
+
+  .group-post {
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .group-cover {
+    height: 120px;
+  }
+
+  .group-cover-name {
+    font-size: 17px;
+  }
+
+  .group-cover-fandom {
+    font-size: 12px;
+  }
+
+  .group-join-btn {
+    padding: 6px 16px;
+    font-size: 12px;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .group-stats {
+    gap: 12px;
+  }
+
+  .stat-value {
+    font-size: 14px;
+  }
+
+  .group-posts-header h3 {
+    font-size: 14px;
+  }
+
+  .create-post-btn {
+    font-size: 11px;
+    padding: 4px 12px;
+  }
+
+  .group-post-content {
+    font-size: 13px;
+  }
+}

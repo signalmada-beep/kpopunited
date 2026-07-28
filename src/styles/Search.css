@@ -1,0 +1,525 @@
+/* ============================================================
+   SEARCH PAGE - PREMIUM
+   ============================================================ */
+
+.search-page {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  padding: 16px 20px;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.search-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+}
+
+.search-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+
+.search-title i {
+  color: var(--kpop-violet);
+}
+
+.search-back {
+  background: none;
+  border: none;
+  color: var(--text-tertiary);
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.search-back:hover {
+  color: var(--text-primary);
+  background: var(--bg-hover);
+}
+
+/* ============================================================
+   BARRE DE RECHERCHE
+   ============================================================ */
+.search-bar-wrapper {
+  flex-shrink: 0;
+  margin-bottom: 16px;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: 100px;
+  padding: 0 16px;
+  transition: all 0.3s ease;
+}
+
+.search-form:focus-within {
+  border-color: var(--kpop-violet);
+  box-shadow: 0 0 0 3px rgba(192, 132, 252, 0.05);
+}
+
+.search-form i {
+  color: var(--text-tertiary);
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 12px 0;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 15px;
+  outline: none;
+  font-family: inherit;
+}
+
+.search-form input::placeholder {
+  color: var(--text-tertiary);
+}
+
+.search-clear-btn {
+  background: none;
+  border: none;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  padding: 4px 8px;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+
+.search-clear-btn:hover {
+  color: var(--text-primary);
+}
+
+.search-submit-btn {
+  padding: 8px 20px;
+  border-radius: 100px;
+  background: var(--gradient-primary);
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+.search-submit-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 20px rgba(192, 132, 252, 0.15);
+}
+
+/* ============================================================
+   FILTRES (catégories)
+   ============================================================ */
+.search-filters {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 4px 0 12px;
+  flex-shrink: 0;
+  scrollbar-width: none;
+}
+
+.search-filters::-webkit-scrollbar {
+  display: none;
+}
+
+.search-filter-btn {
+  padding: 5px 16px;
+  border-radius: 100px;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-tertiary);
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.search-filter-btn:hover {
+  background: var(--bg-hover);
+  color: var(--text-secondary);
+}
+
+.search-filter-btn.active {
+  background: rgba(192, 132, 252, 0.08);
+  color: var(--text-primary);
+  border-color: rgba(192, 132, 252, 0.08);
+}
+
+/* ============================================================
+   RÉSULTATS
+   ============================================================ */
+.search-results {
+  flex: 1;
+  overflow-y: auto;
+  padding: 4px 0 16px;
+}
+
+.search-results::-webkit-scrollbar {
+  width: 4px;
+}
+
+.search-results::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 100px;
+}
+
+.search-results-stats {
+  font-size: 13px;
+  color: var(--text-tertiary);
+  margin-bottom: 12px;
+}
+
+.search-result-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  margin-bottom: 6px;
+}
+
+.search-result-item:hover {
+  background: var(--bg-hover);
+  border-color: var(--border-light);
+  transform: translateX(4px);
+}
+
+.search-result-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: var(--bg-tertiary);
+}
+
+.search-result-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.search-result-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.search-result-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.search-result-subtitle {
+  font-size: 13px;
+  color: var(--text-tertiary);
+}
+
+.search-result-category {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--kpop-violet);
+  background: rgba(192, 132, 252, 0.06);
+  padding: 2px 10px;
+  border-radius: 30px;
+}
+
+.search-result-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: var(--text-tertiary);
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   ÉTAT VIDE
+   ============================================================ */
+.search-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  color: var(--text-tertiary);
+  text-align: center;
+}
+
+.search-empty i {
+  font-size: 48px;
+  color: var(--text-dim);
+  margin-bottom: 16px;
+}
+
+.search-empty h3 {
+  font-size: 18px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.search-empty p {
+  font-size: 14px;
+  margin: 4px 0 0;
+  max-width: 400px;
+}
+
+.search-empty .suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+  justify-content: center;
+}
+
+.search-empty .suggestions span {
+  padding: 4px 14px;
+  border-radius: 30px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  color: var(--text-tertiary);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.search-empty .suggestions span:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+/* ============================================================
+   RECHERCHE RÉCENTE / TENDANCES
+   ============================================================ */
+.search-trending {
+  margin-bottom: 16px;
+}
+
+.search-trending h4 {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.search-trending-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.search-trending-item:hover {
+  color: var(--kpop-violet);
+}
+
+.search-trending-item .trend-rank {
+  font-weight: 700;
+  color: var(--text-tertiary);
+  min-width: 24px;
+}
+
+.search-trending-item .trend-tag {
+  color: var(--text-primary);
+}
+
+.search-trending-item .trend-count {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+  .search-page {
+    padding: 12px 14px;
+  }
+  .search-title {
+    font-size: 18px;
+  }
+  .search-form input {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+  .search-submit-btn {
+    padding: 6px 16px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-page {
+    padding: 10px 10px;
+  }
+  .search-title {
+    font-size: 16px;
+  }
+  .search-form {
+    padding: 0 12px;
+  }
+  .search-form input {
+    font-size: 13px;
+    padding: 8px 0;
+  }
+  .search-submit-btn {
+    padding: 5px 12px;
+    font-size: 12px;
+  }
+  .search-filter-btn {
+    font-size: 12px;
+    padding: 4px 12px;
+  }
+  .search-result-item {
+    padding: 8px 10px;
+  }
+  .search-result-avatar {
+    width: 32px;
+    height: 32px;
+  }
+  .search-result-title {
+    font-size: 13px;
+  }
+  .search-result-subtitle {
+    font-size: 12px;
+  }
+  .search-empty i {
+    font-size: 36px;
+  }
+  .search-empty h3 {
+    font-size: 16px;
+  }
+}
+
+/* ============================================================
+   LIGHT THEME OVERRIDE
+   ============================================================ */
+body.light-mode .search-page {
+  background: var(--bg-primary);
+}
+
+body.light-mode .search-title {
+  color: var(--text-primary);
+}
+
+body.light-mode .search-form {
+  background: var(--bg-input);
+  border-color: var(--border-color);
+}
+
+body.light-mode .search-form input {
+  color: var(--text-primary);
+}
+
+body.light-mode .search-form input::placeholder {
+  color: var(--text-tertiary);
+}
+
+body.light-mode .search-filter-btn {
+  color: var(--text-tertiary);
+  border-color: var(--border-color);
+}
+
+body.light-mode .search-filter-btn:hover {
+  background: var(--bg-hover);
+  color: var(--text-secondary);
+}
+
+body.light-mode .search-filter-btn.active {
+  background: rgba(192, 132, 252, 0.06);
+  color: var(--text-primary);
+  border-color: rgba(192, 132, 252, 0.06);
+}
+
+body.light-mode .search-result-item {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+  box-shadow: var(--shadow-card);
+}
+
+body.light-mode .search-result-item:hover {
+  background: var(--bg-hover);
+  border-color: var(--border-light);
+  box-shadow: var(--shadow-premium);
+}
+
+body.light-mode .search-result-title {
+  color: var(--text-primary);
+}
+
+body.light-mode .search-result-subtitle {
+  color: var(--text-tertiary);
+}
+
+body.light-mode .search-empty {
+  color: var(--text-tertiary);
+}
+
+body.light-mode .search-empty h3 {
+  color: var(--text-secondary);
+}
+
+body.light-mode .search-trending h4 {
+  color: var(--text-tertiary);
+}
+
+body.light-mode .search-trending-item {
+  color: var(--text-secondary);
+}
+
+body.light-mode .search-trending-item .trend-tag {
+  color: var(--text-primary);
+}
+
+body.light-mode .search-empty .suggestions span {
+  background: var(--bg-input);
+  border-color: var(--border-color);
+  color: var(--text-tertiary);
+}
+
+body.light-mode .search-empty .suggestions span:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}

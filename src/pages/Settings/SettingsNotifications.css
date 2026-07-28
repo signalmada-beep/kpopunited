@@ -1,0 +1,114 @@
+/* ============================================================
+   SETTINGS NOTIFICATIONS - STYLE
+   ============================================================ */
+
+.settings-notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.settings-notification-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+}
+
+.settings-notification-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.settings-notification-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(192, 132, 252, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--kpop-violet);
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.settings-notification-label {
+  display: block;
+  font-size: 13px;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.settings-notification-desc {
+  font-size: 11px;
+  color: var(--text-tertiary);
+}
+
+.settings-toggle {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.settings-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.settings-toggle-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.settings-toggle-slider::before {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 3px;
+  bottom: 3px;
+  background: var(--text-tertiary);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.settings-toggle input:checked + .settings-toggle-slider {
+  background: var(--gradient-primary);
+  border-color: transparent;
+}
+
+.settings-toggle input:checked + .settings-toggle-slider::before {
+  transform: translateX(20px);
+  background: #fff;
+}
+
+/* LIGHT MODE */
+body.light-mode .settings-notification-item {
+  background: var(--bg-input);
+  border-color: var(--border-color);
+}
+body.light-mode .settings-notification-label {
+  color: var(--text-primary);
+}
+body.light-mode .settings-notification-desc {
+  color: var(--text-tertiary);
+}
+body.light-mode .settings-toggle-slider {
+  background: var(--bg-input);
+  border-color: var(--border-color);
+}

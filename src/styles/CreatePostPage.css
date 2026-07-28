@@ -1,0 +1,1384 @@
+/* ============================================================
+   CREATE POST PAGE - PREMIUM K-POP UNITED
+   ============================================================ */
+
+.create-post-page {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.create-post-page-container {
+  height: 100%;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.create-post-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border-color);
+  flex-shrink: 0;
+}
+
+.create-post-page-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.create-post-page-title i {
+  font-size: 20px;
+}
+
+.create-post-page-back {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-input);
+  border: none;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  font-size: 16px;
+}
+
+.create-post-page-back:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+/* ============================================================
+   BODY - SCROLLABLE
+   ============================================================ */
+.create-post-page-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.create-post-page-body::-webkit-scrollbar {
+  width: 4px;
+}
+
+.create-post-page-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.create-post-page-body::-webkit-scrollbar-thumb {
+  background: rgba(192, 132, 252, 0.15);
+  border-radius: 100px;
+}
+
+/* ============================================================
+   USER INFO
+   ============================================================ */
+.create-post-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.create-post-user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.create-post-user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.create-post-user-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.create-post-username {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.create-post-verified {
+  color: var(--kpop-violet);
+  font-size: 12px;
+}
+
+.create-post-audience-wrapper {
+  position: relative;
+}
+
+.create-post-audience-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 12px 2px 8px;
+  border-radius: 100px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  color: var(--text-tertiary);
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.create-post-audience-btn:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.create-post-audience-btn i:first-child {
+  font-size: 10px;
+}
+
+.create-post-audience-btn .fa-chevron-down {
+  font-size: 9px;
+}
+
+.create-post-audience-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 4px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 4px;
+  min-width: 140px;
+  z-index: 10;
+  box-shadow: var(--shadow-premium);
+  animation: dropdownIn 0.2s ease;
+}
+
+@keyframes dropdownIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.audience-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 13px;
+  font-family: inherit;
+}
+
+.audience-option:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.audience-option.active {
+  background: rgba(192, 132, 252, 0.06);
+  color: var(--kpop-violet);
+}
+
+.audience-option i {
+  width: 16px;
+  font-size: 12px;
+}
+
+/* ============================================================
+   TITLE INPUT
+   ============================================================ */
+.create-post-title-input {
+  margin-bottom: 4px;
+}
+
+.create-post-title-field {
+  width: 100%;
+  padding: 8px 0;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 18px;
+  font-weight: 600;
+  outline: none;
+  font-family: inherit;
+}
+
+.create-post-title-field::placeholder {
+  color: var(--text-dim);
+}
+
+/* ============================================================
+   CONTENT
+   ============================================================ */
+.create-post-content-wrapper {
+  margin-bottom: 4px;
+}
+
+.create-post-content-textarea {
+  width: 100%;
+  min-height: 100px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-primary);
+  background: transparent;
+  resize: vertical;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+.create-post-content-textarea::placeholder {
+  color: var(--text-dim);
+}
+
+/* ============================================================
+   MOOD DISPLAY
+   ============================================================ */
+.create-post-mood-display {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px 4px 10px;
+  background: rgba(192, 132, 252, 0.08);
+  border: 1px solid rgba(192, 132, 252, 0.06);
+  border-radius: 100px;
+  font-size: 20px;
+  color: var(--kpop-violet);
+  align-self: flex-start;
+}
+
+.create-post-mood-display button {
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.create-post-mood-display button:hover {
+  color: var(--kpop-red);
+}
+
+/* ============================================================
+   MOOD PICKER
+   ============================================================ */
+.mood-picker-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mood-picker-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 30px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  color: var(--text-tertiary);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 12px;
+  transition: all 0.2s;
+  align-self: flex-start;
+}
+
+.mood-picker-toggle:hover {
+  background: var(--bg-hover);
+  color: var(--text-secondary);
+}
+
+.mood-picker-selected {
+  background: rgba(192, 132, 252, 0.08);
+  padding: 0 8px;
+  border-radius: 30px;
+  color: var(--kpop-violet);
+}
+
+.mood-picker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.mood-picker-header span {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-tertiary);
+}
+
+.mood-picker-close-btn {
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px 8px;
+  border-radius: 50%;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mood-picker-close-btn:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.mood-picker-container {
+  background: var(--bg-secondary);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 14px;
+  animation: moodExpand 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes moodExpand {
+  from { opacity: 0; transform: translateY(-8px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.mood-picker-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: 30px;
+  padding: 0 14px;
+  margin-bottom: 10px;
+  transition: all 0.2s;
+}
+
+.mood-picker-search:focus-within {
+  border-color: rgba(192, 132, 252, 0.2);
+  box-shadow: 0 0 0 3px rgba(192, 132, 252, 0.04);
+}
+
+.mood-picker-search i {
+  color: var(--text-dim);
+  font-size: 13px;
+}
+
+.mood-picker-search input {
+  flex: 1;
+  padding: 8px 0;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 13px;
+  outline: none;
+}
+
+.mood-picker-search input::placeholder {
+  color: var(--text-dim);
+}
+
+.mood-picker-search button {
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.mood-picker-search button:hover {
+  color: var(--text-primary);
+}
+
+.mood-picker-groups {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.mood-group-btn {
+  padding: 4px 14px;
+  border-radius: 30px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  color: var(--text-tertiary);
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.mood-group-btn:hover {
+  background: var(--bg-hover);
+  color: var(--text-secondary);
+}
+
+.mood-group-btn.active {
+  background: rgba(192, 132, 252, 0.08);
+  border-color: rgba(192, 132, 252, 0.08);
+  color: var(--kpop-violet);
+}
+
+.mood-picker-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.mood-picker-grid::-webkit-scrollbar {
+  width: 3px;
+}
+
+.mood-picker-grid::-webkit-scrollbar-thumb {
+  background: rgba(192, 132, 252, 0.15);
+  border-radius: 100px;
+}
+
+.mood-option-premium {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 6px;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  background: var(--bg-input);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  font-family: inherit;
+  position: relative;
+}
+
+.mood-option-premium:hover {
+  background: var(--bg-hover);
+  transform: scale(1.04);
+}
+
+.mood-option-premium.active {
+  border-color: var(--kpop-violet);
+  background: rgba(192, 132, 252, 0.06);
+  box-shadow: 0 0 30px rgba(192, 132, 252, 0.05);
+  transform: scale(1.04);
+}
+
+.mood-option-premium .mood-emoji-premium {
+  font-size: 28px;
+  transition: transform 0.3s;
+}
+
+.mood-option-premium:hover .mood-emoji-premium {
+  transform: scale(1.15);
+}
+
+.mood-option-premium.active .mood-emoji-premium {
+  transform: scale(1.1);
+}
+
+.mood-option-premium .mood-label-premium {
+  font-size: 9px;
+  color: var(--text-tertiary);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.mood-option-premium.active .mood-label-premium {
+  color: var(--kpop-violet);
+}
+
+.mood-option-premium .mood-check-premium {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  color: var(--kpop-violet);
+  font-size: 12px;
+  animation: checkPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes checkPop {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.mood-picker-empty {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 30px 0;
+  color: var(--text-dim);
+  font-size: 13px;
+}
+
+.mood-picker-empty i {
+  font-size: 28px;
+}
+
+/* ============================================================
+   CATEGORY SELECTOR
+   ============================================================ */
+.create-post-category-section {
+  padding: 12px 14px;
+  background: var(--bg-input);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.create-post-category-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  margin-bottom: 8px;
+}
+
+.create-post-category-label i {
+  color: var(--kpop-violet);
+}
+
+.create-post-category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.category-option-premium {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: var(--bg-input);
+  border: 2px solid transparent;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  font-family: inherit;
+}
+
+.category-option-premium:hover {
+  background: var(--bg-hover);
+  color: var(--text-secondary);
+}
+
+.category-option-premium.active {
+  background: var(--bg-hover);
+  border-color: rgba(192, 132, 252, 0.15);
+  color: var(--text-primary);
+}
+
+.category-icon-premium {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.category-label-premium {
+  font-size: 11px;
+  font-weight: 500;
+  flex: 1;
+}
+
+/* ============================================================
+   IMAGES
+   ============================================================ */
+.create-post-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 8px;
+}
+
+.create-post-image-preview {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+}
+
+.create-post-image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.create-post-image-preview button {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  transition: all 0.2s;
+}
+
+.create-post-image-preview button:hover {
+  background: var(--kpop-red);
+  transform: scale(1.1);
+}
+
+/* ============================================================
+   QUICK ACTIONS
+   ============================================================ */
+.create-post-quick-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.quick-action-premium {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 30px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  color: var(--text-tertiary);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.quick-action-premium:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+.quick-action-premium i {
+  font-size: 14px;
+}
+
+/* ============================================================
+   POST PREVIEW
+   ============================================================ */
+.create-post-preview {
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.create-post-preview-header {
+  padding: 8px 14px;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 11px;
+  color: var(--text-tertiary);
+}
+
+.create-post-preview-header i {
+  margin-right: 6px;
+}
+
+.create-post-preview-content {
+  padding: 12px 14px;
+}
+
+.preview-mood {
+  font-size: 24px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.preview-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.preview-images img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ============================================================
+   FOOTER - STICKY ACTION BAR
+   ============================================================ */
+.create-post-page-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid var(--border-color);
+  flex-shrink: 0;
+  background: var(--bg-primary);
+}
+
+.create-post-footer-info {
+  display: flex;
+  gap: 12px;
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+.footer-char-count {
+  color: var(--text-dim);
+}
+
+.footer-category {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-tertiary);
+}
+
+.create-post-footer-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.create-post-discard-btn {
+  padding: 8px 16px;
+  border-radius: 30px;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-tertiary);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.create-post-discard-btn:hover {
+  background: var(--bg-hover);
+  color: var(--kpop-red);
+}
+
+.create-post-submit-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 24px;
+  border-radius: 30px;
+  background: var(--bg-input);
+  border: none;
+  color: var(--text-dim);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: not-allowed;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  font-family: inherit;
+}
+
+.create-post-submit-btn.active {
+  background: var(--gradient-primary);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(192, 132, 252, 0.15);
+}
+
+.create-post-submit-btn.active:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 28px rgba(192, 132, 252, 0.25);
+}
+
+.create-post-submit-btn.active:active {
+  transform: scale(0.95);
+}
+
+.create-post-submit-btn .spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ============================================================
+   LIGHT MODE OVERRIDE
+   ============================================================ */
+body.light-mode .create-post-page {
+  background: var(--bg-primary);
+}
+
+body.light-mode .create-post-page-title {
+  color: var(--text-primary);
+}
+
+body.light-mode .create-post-page-back {
+  background: var(--bg-input);
+  color: var(--text-tertiary);
+}
+
+body.light-mode .create-post-page-back:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+body.light-mode .create-post-username {
+  color: var(--text-primary);
+}
+
+body.light-mode .create-post-audience-btn {
+  background: var(--bg-input);
+  border-color: var(--border-color);
+  color: var(--text-tertiary);
+}
+
+body.light-mode .create-post-audience-btn:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+body.light-mode .create-post-audience-dropdown {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+
+body.light-mode .audience-option {
+  color: var(--text-tertiary);
+}
+
+body.light-mode .audience-option:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+body.light-mode .audience-option.active {
+  background: rgba(192, 132, 252, 0.06);
+  color: var(--kpop-violet);
+}
+
+body.light-mode .create-post-title-field {
+  color: var(--text-primary);
+}
+
+body.light-mode .create-post-title-field::placeholder {
+  color: var(--text-dim);
+}
+
+body.light-mode .create-post-content-textarea {
+  color: var(--text-primary);
+}
+
+body.light-mode .create-post-content-textarea::placeholder {
+  color: var(--text-dim);
+}
+
+body.light-mode .create-post-mood-display {
+  background: rgba(192, 132, 252, 0.06);
+  border-color: rgba(192, 132, 252, 0.06);
+}
+
+body.light-mode .mood-picker-toggle {
+  background: var(--bg-input);
+  border-color: var(--border-color);
+  color: var(--text-tertiary);
+}
+
+body.light-mode .mood-picker-toggle:hover {
+  background: var(--bg-hover);
+  color: var(--text-secondary);
+}
+
+body.light-mode .mood-picker-container {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+
+body.light-mode .mood-picker-search {
+  background: var(--bg-input);
+  border-color: var(--border-color);
+}
+
+body.light-mode .mood-picker-search input {
+  color: var(--text-primary);
+}
+
+body.light-mode .mood-picker-search input::placeholder {
+  color: var(--text-dim);
+}
+
+body.light-mode .mood-group-btn {
+  background: var(--bg-input);
+  border-color: var(--border-color);
+  color: var(--text-tertiary);
+}
+
+body.light-mode .mood-group-btn:hover {
+  background: var(--bg-hover);
+  color: var(--text-secondary);
+}
+
+body.light-mode .mood-group-btn.active {
+  background: rgba(192, 132, 252, 0.08);
+  border-color: rgba(192, 132, 252, 0.08);
+  color: var(--kpop-violet);
+}
+
+body.light-mode .mood-option-premium {
+  background: var(--bg-input);
+}
+
+body.light-mode .mood-option-premium:hover {
+  background: var(--bg-hover);
+}
+
+body.light-mode .mood-option-premium.active {
+  border-color: var(--kpop-violet);
+  background: rgba(192, 132, 252, 0.06);
+}
+
+body.light-mode .mood-option-premium .mood-label-premium {
+  color: var(--text-tertiary);
+}
+
+body.light-mode .mood-option-premium.active .mood-label-premium {
+  color: var(--kpop-violet);
+}
+
+body.light-mode .create-post-category-section {
+  background: var(--bg-input);
+  border-color: var(--border-color);
+}
+
+body.light-mode .create-post-category-label {
+  color: var(--text-tertiary);
+}
+
+body.light-mode .category-option-premium {
+  background: var(--bg-input);
+  color: var(--text-tertiary);
+}
+
+body.light-mode .category-option-premium:hover {
+  background: var(--bg-hover);
+  color: var(--text-secondary);
+}
+
+body.light-mode .category-option-premium.active {
+  background: var(--bg-hover);
+  border-color: rgba(192, 132, 252, 0.15);
+  color: var(--text-primary);
+}
+
+body.light-mode .create-post-image-preview {
+  background: var(--bg-tertiary);
+  border-color: var(--border-color);
+}
+
+body.light-mode .create-post-quick-actions {
+  border-color: var(--border-color);
+}
+
+body.light-mode .quick-action-premium {
+  background: var(--bg-input);
+  border-color: var(--border-color);
+  color: var(--text-tertiary);
+}
+
+body.light-mode .quick-action-premium:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+body.light-mode .create-post-preview {
+  background: var(--bg-input);
+  border-color: var(--border-color);
+}
+
+body.light-mode .create-post-preview-header {
+  color: var(--text-tertiary);
+}
+
+body.light-mode .create-post-page-footer {
+  border-color: var(--border-color);
+  background: var(--bg-primary);
+}
+
+body.light-mode .create-post-footer-info {
+  color: var(--text-dim);
+}
+
+body.light-mode .footer-category {
+  color: var(--text-tertiary);
+}
+
+body.light-mode .create-post-discard-btn {
+  border-color: var(--border-color);
+  color: var(--text-tertiary);
+}
+
+body.light-mode .create-post-discard-btn:hover {
+  background: var(--bg-hover);
+}
+
+body.light-mode .create-post-submit-btn {
+  background: var(--bg-input);
+  color: var(--text-dim);
+}
+
+body.light-mode .create-post-submit-btn.active {
+  background: var(--gradient-primary);
+  color: #fff;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+  .create-post-page-container {
+    padding: 0 12px 12px;
+  }
+
+  .create-post-page-title {
+    font-size: 17px;
+  }
+
+  .mood-picker-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .create-post-category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .create-post-page-footer {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .create-post-footer-info {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .create-post-footer-actions {
+    width: 100%;
+  }
+
+  .create-post-discard-btn {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .create-post-submit-btn {
+    flex: 2;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .create-post-page-container {
+    padding: 0 8px 8px;
+  }
+
+  .create-post-page-title {
+    font-size: 15px;
+  }
+
+  .mood-picker-grid {
+    grid-template-columns: repeat(4, 1fr);
+    max-height: 160px;
+  }
+
+  .mood-option-premium .mood-emoji-premium {
+    font-size: 22px;
+  }
+
+  .create-post-category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .category-option-premium {
+    padding: 6px 8px;
+  }
+
+  .category-icon-premium {
+    width: 24px;
+    height: 24px;
+    font-size: 9px;
+  }
+
+  .category-label-premium {
+    font-size: 10px;
+  }
+
+  .create-post-content-textarea {
+    font-size: 14px;
+    min-height: 80px;
+  }
+
+  .create-post-images {
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  }
+
+  .quick-action-premium span {
+    display: none;
+  }
+
+  .quick-action-premium {
+    padding: 6px 10px;
+  }
+
+  .create-post-submit-btn {
+    padding: 6px 16px;
+    font-size: 12px;
+  }
+
+  .create-post-discard-btn {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+
+  .mood-picker-groups {
+    gap: 3px;
+  }
+
+  .mood-group-btn {
+    font-size: 10px;
+    padding: 3px 10px;
+  }
+}
+
+/* ============================================================
+   CREATE POST PAGE - PREMIUM K-POP UNITED
+   ============================================================ */
+
+.create-post-page {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.create-post-page-container {
+  height: 100%;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================================
+   HEADER - FANITSARANA
+   ============================================================ */
+.create-post-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border-color);
+  flex-shrink: 0;
+  /* ✅ FANITSARANA: Atao azo antoka fa tsy takona */
+  margin-top: 0;
+  min-height: 60px;
+}
+
+.create-post-page-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.create-post-page-title i {
+  font-size: 20px;
+}
+
+.create-post-page-back {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-input);
+  border: none;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.create-post-page-back:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+/* ============================================================
+   BODY - SCROLLABLE
+   ============================================================ */
+.create-post-page-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.create-post-page-body::-webkit-scrollbar {
+  width: 4px;
+}
+
+.create-post-page-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.create-post-page-body::-webkit-scrollbar-thumb {
+  background: rgba(192, 132, 252, 0.15);
+  border-radius: 100px;
+}
+
+/* ============================================================
+   RESPONSIVE - TELEPHONE
+   ============================================================ */
+@media (max-width: 768px) {
+  .create-post-page-container {
+    padding: 0 12px 12px;
+  }
+
+  .create-post-page-header {
+    padding: 12px 0;
+    min-height: 52px;
+  }
+
+  .create-post-page-title {
+    font-size: 17px;
+  }
+
+  .create-post-page-body {
+    padding: 12px 0 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .create-post-page-container {
+    padding: 0 8px 8px;
+  }
+
+  .create-post-page-header {
+    padding: 10px 0;
+    min-height: 48px;
+  }
+
+  .create-post-page-title {
+    font-size: 15px;
+  }
+
+  .create-post-page-back {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .create-post-page-body {
+    padding: 10px 0 12px;
+    gap: 10px;
+  }
+}
+
+/* ============================================================
+   LIGHT MODE OVERRIDE
+   ============================================================ */
+body.light-mode .create-post-page {
+  background: var(--bg-primary);
+}
+
+body.light-mode .create-post-page-title {
+  color: var(--text-primary);
+}
+
+body.light-mode .create-post-page-back {
+  background: var(--bg-input);
+  color: var(--text-tertiary);
+}
+
+body.light-mode .create-post-page-back:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+

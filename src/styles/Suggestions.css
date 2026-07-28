@@ -1,0 +1,455 @@
+/* ============================================================
+   SUGGESTIONS - PREMIUM K-POP UNITED
+   ============================================================ */
+
+.suggestions-container {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 14px;
+  border: 1px solid var(--border-color);
+  padding: 16px;
+  margin-bottom: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.suggestions-container:hover {
+  border-color: var(--border-light);
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.suggestions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.suggestions-header h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.suggestions-header h3 i {
+  color: var(--kpop-violet);
+}
+
+.suggestions-count {
+  font-size: 11px;
+  color: var(--text-tertiary);
+}
+
+/* ============================================================
+   LIST
+   ============================================================ */
+.suggestions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ============================================================
+   ITEM
+   ============================================================ */
+.suggestion-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  cursor: default;
+}
+
+.suggestion-item:hover {
+  background: var(--bg-hover);
+}
+
+/* ============================================================
+   AVATAR
+   ============================================================ */
+.suggestion-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  flex-shrink: 0;
+  position: relative;
+  border: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.suggestion-avatar:hover {
+  border-color: var(--kpop-violet);
+}
+
+.suggestion-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.suggestion-verified {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  background: var(--bg-primary);
+  border-radius: 50%;
+  padding: 2px;
+  font-size: 12px;
+  color: var(--kpop-violet);
+}
+
+/* ============================================================
+   INFO
+   ============================================================ */
+.suggestion-info {
+  flex: 1;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.suggestion-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.suggestion-name .verified-badge {
+  color: var(--kpop-violet);
+  font-size: 11px;
+}
+
+.suggestion-username {
+  font-size: 11px;
+  color: var(--text-tertiary);
+}
+
+.suggestion-bio {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 1px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.suggestion-meta {
+  display: flex;
+  gap: 6px;
+  margin-top: 2px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* ============================================================
+   BADGE
+   ============================================================ */
+.suggestion-badge {
+  font-size: 8px;
+  padding: 1px 8px;
+  border-radius: 30px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.suggestion-followers,
+.suggestion-posts {
+  font-size: 10px;
+  color: var(--text-tertiary);
+}
+
+/* ============================================================
+   FOLLOW BUTTON
+   ============================================================ */
+.suggestion-follow-btn {
+  padding: 4px 14px;
+  border-radius: 30px;
+  border: none;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--kpop-violet), var(--kpop-rose));
+  color: #fff;
+}
+
+.suggestion-follow-btn:hover:not(:disabled) {
+  transform: scale(1.04);
+  box-shadow: 0 4px 16px rgba(192, 132, 252, 0.2);
+}
+
+.suggestion-follow-btn.following {
+  background: var(--bg-input);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.suggestion-follow-btn.following:hover {
+  background: rgba(239, 68, 68, 0.05);
+  color: var(--kpop-red);
+}
+
+.suggestion-follow-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.suggestion-follow-btn i {
+  font-size: 11px;
+}
+
+.suggestion-btn-spinner {
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+}
+
+.suggestion-follow-btn.following .suggestion-btn-spinner {
+  border-top-color: var(--text-secondary);
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ============================================================
+   MORE
+   ============================================================ */
+.suggestions-more {
+  text-align: center;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border-color);
+}
+
+.suggestions-more button {
+  background: none;
+  border: none;
+  color: var(--kpop-violet);
+  font-size: 12px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.suggestions-more button:hover {
+  color: var(--kpop-rose);
+}
+
+/* ============================================================
+   LOADING / EMPTY
+   ============================================================ */
+.suggestions-loading,
+.suggestions-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: var(--text-tertiary);
+  gap: 6px;
+}
+
+.suggestions-loading .suggestions-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border-color);
+  border-top-color: var(--kpop-violet);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.suggestions-empty i {
+  font-size: 28px;
+  color: var(--text-dim);
+}
+
+.suggestions-empty p {
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+  .suggestions-container {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .suggestion-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .suggestion-name {
+    font-size: 12px;
+  }
+
+  .suggestion-follow-btn {
+    font-size: 10px;
+    padding: 3px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .suggestions-container {
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+
+  .suggestions-header h3 {
+    font-size: 13px;
+  }
+
+  .suggestion-item {
+    padding: 6px 8px;
+    gap: 10px;
+  }
+
+  .suggestion-avatar {
+    width: 36px;
+    height: 36px;
+  }
+
+  .suggestion-name {
+    font-size: 11px;
+  }
+
+  .suggestion-username {
+    font-size: 10px;
+  }
+
+  .suggestion-bio {
+    font-size: 10px;
+  }
+
+  .suggestion-badge {
+    font-size: 7px;
+    padding: 0 6px;
+  }
+
+  .suggestion-followers,
+  .suggestion-posts {
+    font-size: 9px;
+  }
+
+  .suggestion-follow-btn {
+    font-size: 9px;
+    padding: 2px 10px;
+  }
+
+  .suggestions-count {
+    font-size: 10px;
+  }
+}
+
+/* ============================================================
+   LIGHT MODE
+   ============================================================ */
+body.light-mode .suggestions-container {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+  box-shadow: var(--shadow-card);
+}
+
+body.light-mode .suggestions-container:hover {
+  border-color: var(--border-light);
+  box-shadow: var(--shadow-premium);
+}
+
+body.light-mode .suggestions-header {
+  border-color: var(--border-color);
+}
+
+body.light-mode .suggestions-header h3 {
+  color: var(--text-primary);
+}
+
+body.light-mode .suggestion-item:hover {
+  background: var(--bg-hover);
+}
+
+body.light-mode .suggestion-name {
+  color: var(--text-primary);
+}
+
+body.light-mode .suggestion-username {
+  color: var(--text-tertiary);
+}
+
+body.light-mode .suggestion-bio {
+  color: var(--text-muted);
+}
+
+body.light-mode .suggestion-follow-btn {
+  background: linear-gradient(135deg, var(--kpop-violet), var(--kpop-rose));
+  color: #fff;
+}
+
+body.light-mode .suggestion-follow-btn.following {
+  background: var(--bg-input);
+  color: var(--text-secondary);
+  border-color: var(--border-color);
+}
+
+body.light-mode .suggestion-follow-btn.following:hover {
+  background: rgba(220, 38, 38, 0.05);
+  color: var(--kpop-red);
+}
+
+body.light-mode .suggestions-more button {
+  color: var(--kpop-violet);
+}
+
+body.light-mode .suggestions-more button:hover {
+  color: var(--kpop-rose);
+}
+
+body.light-mode .suggestions-loading,
+body.light-mode .suggestions-empty {
+  color: var(--text-tertiary);
+}
+
+body.light-mode .suggestions-empty i {
+  color: var(--text-dim);
+}
+
+body.light-mode .suggestions-loading .suggestions-spinner {
+  border-color: var(--border-color);
+  border-top-color: var(--kpop-violet);
+}

@@ -1,0 +1,551 @@
+/* ============================================================
+   NOTIFICATIONS PAGE - PREMIUM
+   ============================================================ */
+
+/* ✅ DARK MODE - DEFAULT */
+:root,
+body.dark-mode {
+  --notif-bg: #0A0A0F;
+  --notif-card: rgba(20, 20, 29, 0.6);
+  --notif-input: rgba(255, 255, 255, 0.04);
+  --notif-hover: rgba(255, 255, 255, 0.02);
+  --notif-border: rgba(255, 255, 255, 0.04);
+  --notif-text: #FFFFFF;
+  --notif-secondary: #B8B8D0;
+  --notif-tertiary: #7A7A9A;
+  --notif-dim: rgba(255, 255, 255, 0.15);
+  --notif-violet: #C084FC;
+  --notif-rose: #EC4899;
+}
+
+/* ✅ LIGHT MODE */
+body.light-mode {
+  --notif-bg: #F0F0F5;
+  --notif-card: rgba(255, 255, 255, 0.8);
+  --notif-input: rgba(0, 0, 0, 0.03);
+  --notif-hover: rgba(0, 0, 0, 0.02);
+  --notif-border: rgba(0, 0, 0, 0.06);
+  --notif-text: #1A1A2E;
+  --notif-secondary: #4A4A5A;
+  --notif-tertiary: #7A7A9A;
+  --notif-dim: rgba(0, 0, 0, 0.15);
+  --notif-violet: #C084FC;
+  --notif-rose: #EC4899;
+}
+
+/* ============================================================
+   PAGE PRINCIPALE
+   ============================================================ */
+.notifications-page {
+  padding: 16px 20px;
+  color: var(--notif-text);
+  background: var(--notif-bg);
+  height: 100%;
+  overflow-y: auto;
+}
+
+.notifications-page::-webkit-scrollbar {
+  width: 4px;
+}
+
+.notifications-page::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 100px;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.notifications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.notifications-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.notifications-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--notif-text);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+
+.notifications-count {
+  font-size: 12px;
+  color: var(--notif-tertiary);
+  background: var(--notif-input);
+  padding: 2px 12px;
+  border-radius: 100px;
+}
+
+.mark-all-read-btn {
+  padding: 6px 16px;
+  border-radius: 100px;
+  background: rgba(192, 132, 252, 0.06);
+  border: 1px solid rgba(192, 132, 252, 0.08);
+  color: var(--notif-violet);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: inherit;
+}
+
+.mark-all-read-btn:hover {
+  background: rgba(192, 132, 252, 0.12);
+}
+
+/* ============================================================
+   FILTERS
+   ============================================================ */
+.notifications-filters {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.filter-btn {
+  padding: 6px 16px;
+  border-radius: 100px;
+  background: transparent;
+  color: var(--notif-tertiary);
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid var(--notif-border);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.filter-btn:hover {
+  color: var(--notif-secondary);
+}
+
+.filter-btn.active {
+  background: rgba(192, 132, 252, 0.08);
+  color: var(--notif-text);
+  border-color: rgba(192, 132, 252, 0.08);
+}
+
+/* ============================================================
+   LIST
+   ============================================================ */
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.notification-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--notif-input);
+  border-radius: 12px;
+  transition: background 0.2s ease;
+  position: relative;
+}
+
+.notification-item:hover {
+  background: var(--notif-hover);
+}
+
+.notification-item.unread {
+  border-left: 3px solid var(--notif-violet);
+}
+
+.notification-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #fff;
+}
+
+.notification-icon i {
+  font-size: 14px;
+}
+
+.notification-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.notification-user {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.notification-username {
+  font-weight: 600;
+  color: var(--notif-text);
+  font-size: 14px;
+}
+
+.notification-action {
+  font-size: 14px;
+  color: var(--notif-secondary);
+}
+
+.notification-target {
+  display: block;
+  font-size: 13px;
+  color: var(--notif-violet);
+  margin-top: 2px;
+}
+
+.notification-time {
+  font-size: 12px;
+  color: var(--notif-dim);
+  display: block;
+  margin-top: 2px;
+}
+
+.notification-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--notif-rose);
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   EMPTY STATE
+   ============================================================ */
+.notifications-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  color: var(--notif-tertiary);
+}
+
+.notifications-empty i {
+  font-size: 48px;
+  color: var(--notif-dim);
+  margin-bottom: 16px;
+}
+
+.notifications-empty h3 {
+  font-size: 18px;
+  color: var(--notif-secondary);
+  margin: 0;
+}
+
+.notifications-empty p {
+  font-size: 14px;
+  color: var(--notif-tertiary);
+  margin: 0;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+  .notifications-page {
+    padding: 12px 14px;
+  }
+
+  .notifications-title {
+    font-size: 18px;
+  }
+
+  .notifications-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mark-all-read-btn {
+    justify-content: center;
+  }
+
+  .notification-item {
+    padding: 10px 12px;
+  }
+
+  .notification-username {
+    font-size: 13px;
+  }
+
+  .notification-action {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .notifications-page {
+    padding: 10px 10px;
+  }
+
+  .notifications-title {
+    font-size: 16px;
+  }
+
+  .filter-btn {
+    font-size: 12px;
+    padding: 4px 12px;
+  }
+
+  .notification-item {
+    padding: 8px 10px;
+    gap: 10px;
+  }
+
+  .notification-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .notification-icon i {
+    font-size: 12px;
+  }
+
+  .notification-username {
+    font-size: 12px;
+  }
+
+  .notification-action {
+    font-size: 12px;
+  }
+
+  .notification-target {
+    font-size: 12px;
+  }
+}
+
+/* ============================================================
+   LIGHT THEME OVERRIDE (FANITSARA FARANY)
+   ============================================================ */
+body.light-mode .notifications-page {
+  background: var(--notif-bg);
+}
+
+body.light-mode .notifications-title {
+  color: var(--notif-text);
+}
+
+body.light-mode .notifications-count {
+  color: var(--notif-tertiary);
+  background: var(--notif-input);
+}
+
+body.light-mode .filter-btn {
+  color: var(--notif-tertiary);
+  border-color: var(--notif-border);
+}
+
+body.light-mode .filter-btn:hover {
+  color: var(--notif-secondary);
+}
+
+body.light-mode .filter-btn.active {
+  color: var(--notif-text);
+  background: rgba(192, 132, 252, 0.08);
+  border-color: rgba(192, 132, 252, 0.08);
+}
+
+body.light-mode .notification-item {
+  background: var(--notif-input);
+}
+
+body.light-mode .notification-item:hover {
+  background: var(--notif-hover);
+}
+
+body.light-mode .notification-username {
+  color: var(--notif-text);
+}
+
+body.light-mode .notification-action {
+  color: var(--notif-secondary);
+}
+
+body.light-mode .notification-target {
+  color: var(--notif-violet);
+}
+
+body.light-mode .notification-time {
+  color: var(--notif-dim);
+}
+
+body.light-mode .notifications-empty {
+  color: var(--notif-tertiary);
+}
+
+body.light-mode .notifications-empty h3 {
+  color: var(--notif-secondary);
+}
+
+body.light-mode .notifications-empty p {
+  color: var(--notif-tertiary);
+}
+
+/* ============================================================
+   NOTIFICATIONS.CSS - FANITSARA
+   ============================================================ */
+
+/* ✅ LIGHT MODE - TAHO NY LEFT SIDEBAR */
+body.light-mode {
+  --notif-bg: #F0F0F5;
+  --notif-card: rgba(255, 255, 255, 0.8);
+  --notif-input: rgba(0, 0, 0, 0.02);
+  --notif-hover: rgba(0, 0, 0, 0.02);
+  --notif-border: rgba(0, 0, 0, 0.06);
+  --notif-text: #1A1A2E;
+  --notif-secondary: #4A4A5A;
+  --notif-tertiary: #7A7A9A;
+  --notif-dim: rgba(0, 0, 0, 0.15);
+  --notif-violet: #C084FC;
+  --notif-rose: #EC4899;
+}
+
+/* ============================================================
+   NOTIFICATIONS - LIGHT MODE OVERRIDE
+   ============================================================ */
+body.light-mode .notifications-page {
+  background: var(--notif-bg);
+}
+
+body.light-mode .notifications-title {
+  color: var(--notif-text);
+}
+
+body.light-mode .notifications-count {
+  color: var(--notif-tertiary);
+  background: var(--notif-input);
+}
+
+body.light-mode .filter-btn {
+  color: var(--notif-tertiary);
+  border-color: var(--notif-border);
+}
+
+body.light-mode .filter-btn:hover {
+  color: var(--notif-secondary);
+}
+
+body.light-mode .filter-btn.active {
+  color: var(--notif-text);
+  background: rgba(192, 132, 252, 0.08);
+  border-color: rgba(192, 132, 252, 0.08);
+}
+
+body.light-mode .notification-item {
+  background: var(--notif-input);
+}
+
+body.light-mode .notification-item:hover {
+  background: var(--notif-hover);
+}
+
+body.light-mode .notification-username {
+  color: var(--notif-text);
+}
+
+body.light-mode .notification-action {
+  color: var(--notif-secondary);
+}
+
+body.light-mode .notification-target {
+  color: var(--notif-violet);
+}
+
+body.light-mode .notification-time {
+  color: var(--notif-dim);
+}
+
+body.light-mode .notifications-empty {
+  color: var(--notif-tertiary);
+}
+
+body.light-mode .notifications-empty h3 {
+  color: var(--notif-secondary);
+}
+
+body.light-mode .notifications-empty p {
+  color: var(--notif-tertiary);
+}
+
+/* ============================================================
+   NOTIFICATIONS.CSS - LIGHT MODE
+   ============================================================ */
+
+body.light-mode .notifications-page {
+  background: var(--bg-primary);
+}
+
+body.light-mode .notifications-title {
+  color: var(--text-primary);
+}
+
+body.light-mode .notifications-count {
+  background: var(--bg-input);
+  color: var(--text-tertiary);
+}
+
+body.light-mode .filter-btn {
+  color: var(--text-tertiary);
+  border-color: var(--border-color);
+}
+
+body.light-mode .filter-btn:hover {
+  color: var(--text-secondary);
+}
+
+body.light-mode .filter-btn.active {
+  background: rgba(139, 92, 246, 0.06);
+  color: var(--text-primary);
+  border-color: rgba(139, 92, 246, 0.06);
+}
+
+body.light-mode .notification-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-card);
+}
+
+body.light-mode .notification-item:hover {
+  background: var(--bg-hover);
+  box-shadow: var(--shadow-premium);
+}
+
+body.light-mode .notification-item.unread {
+  border-left-color: var(--kpop-violet);
+}
+
+body.light-mode .notification-username {
+  color: var(--text-primary);
+}
+
+body.light-mode .notification-action {
+  color: var(--text-secondary);
+}
+
+body.light-mode .notification-target {
+  color: var(--kpop-violet);
+}
+
+body.light-mode .notification-time {
+  color: var(--text-muted);
+}

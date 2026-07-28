@@ -1,0 +1,228 @@
+/* ============================================================
+   INDEX.CSS - FOTOTRA
+   ============================================================ */
+
+/* ✅ IMPORTS REHETRA */
+@import './styles/Variables.css';
+@import './styles/App.css';
+@import './styles/Responsive.css';
+@import './styles/Header.css';
+@import './styles/Sidebar.css';
+@import './styles/RightSidebar.css';
+@import './styles/Home.css';
+@import './styles/Explore.css';
+@import './styles/News.css';
+@import './styles/Artists.css';
+@import './styles/Groups.css';
+@import './styles/Events.css';
+@import './styles/Videos.css';
+@import './styles/Community.css';
+@import './styles/Messages.css';
+@import './styles/Notifications.css';
+@import './styles/Profile.css';
+@import './styles/Trending.css';
+@import './layout/RightSidebar/styles/index.css';
+
+/* ============================================================
+   THEME VARIABLES - DARK / LIGHT
+   ============================================================ */
+
+/* ✅ DARK THEME - DEFAULT */
+:root,
+[data-theme="dark"] {
+  /* ===== COULEURS DE FOND ===== */
+  --bg-primary: #0A0A0F;
+  --bg-secondary: #14141D;
+  --bg-tertiary: #1A1A2E;
+  --bg-card: rgba(20, 20, 29, 0.6);
+  --bg-input: rgba(255, 255, 255, 0.04);
+  --bg-hover: rgba(255, 255, 255, 0.02);
+  --bg-overlay: rgba(0, 0, 0, 0.6);
+  
+  /* ===== COULEURS DE TEXTE ===== */
+  --text-primary: #FFFFFF;
+  --text-secondary: #B8B8D0;
+  --text-tertiary: #7A7A9A;
+  --text-muted: rgba(255, 255, 255, 0.35);
+  --text-dim: rgba(255, 255, 255, 0.15);
+  
+  /* ===== BORDURES ===== */
+  --border-color: rgba(255, 255, 255, 0.04);
+  --border-light: rgba(255, 255, 255, 0.06);
+  --border-input: rgba(255, 255, 255, 0.06);
+  
+  /* ===== OMBRES ===== */
+  --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.3);
+  --shadow-premium: 0 8px 40px rgba(0, 0, 0, 0.4);
+  
+  /* ===== SCROLLBAR ===== */
+  --scrollbar-track: transparent;
+  --scrollbar-thumb: rgba(255, 255, 255, 0.06);
+  --scrollbar-thumb-hover: rgba(192, 132, 252, 0.12);
+  
+  /* ===== COULEURS K-POP ===== */
+  --kpop-violet: #C084FC;
+  --kpop-rose: #EC4899;
+  --kpop-gold: #FFD700;
+  --kpop-blue: #4A90D9;
+  --kpop-green: #00B894;
+  --kpop-red: #EF4444;
+  
+  /* ===== GRADIENTS ===== */
+  --gradient-primary: linear-gradient(135deg, #C084FC, #EC4899);
+  --gradient-secondary: linear-gradient(135deg, #4A90D9, #00B894);
+}
+
+/* ✅ LIGHT THEME */
+[data-theme="light"] {
+  /* ===== COULEURS DE FOND ===== */
+  --bg-primary: #F0F0F5;
+  --bg-secondary: #FFFFFF;
+  --bg-tertiary: #E8E8EE;
+  --bg-card: rgba(255, 255, 255, 0.8);
+  --bg-input: rgba(0, 0, 0, 0.03);
+  --bg-hover: rgba(0, 0, 0, 0.02);
+  --bg-overlay: rgba(0, 0, 0, 0.4);
+  
+  /* ===== COULEURS DE TEXTE ===== */
+  --text-primary: #1A1A2E;
+  --text-secondary: #4A4A5A;
+  --text-tertiary: #7A7A9A;
+  --text-muted: rgba(0, 0, 0, 0.35);
+  --text-dim: rgba(0, 0, 0, 0.15);
+  
+  /* ===== BORDURES ===== */
+  --border-color: rgba(0, 0, 0, 0.06);
+  --border-light: rgba(0, 0, 0, 0.04);
+  --border-input: rgba(0, 0, 0, 0.06);
+  
+  /* ===== OMBRES ===== */
+  --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.08);
+  --shadow-premium: 0 8px 40px rgba(0, 0, 0, 0.1);
+  
+  /* ===== SCROLLBAR ===== */
+  --scrollbar-track: transparent;
+  --scrollbar-thumb: rgba(0, 0, 0, 0.06);
+  --scrollbar-thumb-hover: rgba(192, 132, 252, 0.12);
+  
+  /* ===== COULEURS K-POP (mitovy) ===== */
+  --kpop-violet: #C084FC;
+  --kpop-rose: #EC4899;
+  --kpop-gold: #FFD700;
+  --kpop-blue: #4A90D9;
+  --kpop-green: #00B894;
+  --kpop-red: #EF4444;
+  
+  /* ===== GRADIENTS (mitovy) ===== */
+  --gradient-primary: linear-gradient(135deg, #C084FC, #EC4899);
+  --gradient-secondary: linear-gradient(135deg, #4A90D9, #00B894);
+}
+
+/* ============================================================
+   APPLIQUER LES VARIABLES AUX ELEMENTS DE BASE
+   ============================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+body {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+input, textarea {
+  font-family: inherit;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+/* ============================================================
+   SCROLLBAR PERSONNALISEE
+   ============================================================ */
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* ============================================================
+   SELECTION TEXTE
+   ============================================================ */
+
+::selection {
+  background: var(--kpop-violet);
+  color: #fff;
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.animate-fade {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+/* ============================================================
+   UTILITIES
+   ============================================================ */
+
+.z-base { z-index: 0; }
+.z-low { z-index: 1; }
+.z-medium { z-index: 10; }
+.z-high { z-index: 100; }
+.z-highest { z-index: 999999 !important; }

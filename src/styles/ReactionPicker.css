@@ -1,0 +1,372 @@
+/* ============================================================
+   REACTION PICKER - ANCHORED POPOVER
+   ============================================================ */
+
+.reaction-picker-anchored {
+  position: fixed;
+  background: rgba(26, 26, 46, 0.95);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.02);
+  min-width: 200px;
+  max-width: 280px;
+  padding: 8px 10px 10px;
+  transform-origin: center bottom;
+  animation: popoverIn 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes popoverIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* ============================================================
+   CONTENT
+   ============================================================ */
+.reaction-picker-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* ============================================================
+   GROUP
+   ============================================================ */
+.reaction-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.reaction-group:last-child {
+  margin-bottom: 0;
+}
+
+.reaction-group-label {
+  font-size: 8px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.12);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 0 4px;
+}
+
+/* ============================================================
+   GRID - COMPACT
+   ============================================================ */
+.reaction-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2px;
+}
+
+/* ============================================================
+   REACTION BUTTONS - COMPACT & BIG EMOJIS
+   ============================================================ */
+.reaction-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+  padding: 6px 2px 4px;
+  border: none;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  min-height: 44px;
+}
+
+.reaction-btn:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: scale(1.08);
+}
+
+.reaction-btn:active {
+  transform: scale(0.92);
+}
+
+.reaction-btn .reaction-emoji {
+  font-size: 28px;
+  line-height: 1;
+  transition: transform 0.15s ease;
+}
+
+.reaction-btn:hover .reaction-emoji {
+  transform: scale(1.12);
+}
+
+.reaction-btn .reaction-label {
+  font-size: 6px;
+  color: rgba(255, 255, 255, 0.12);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-top: 1px;
+  transition: color 0.15s ease;
+}
+
+.reaction-btn.active {
+  background: rgba(192, 132, 252, 0.08);
+}
+
+.reaction-btn.active .reaction-label {
+  color: #C084FC;
+}
+
+.reaction-btn.active .reaction-emoji {
+  transform: scale(1.05);
+}
+
+/* ============================================================
+   TOOLTIP SUR HOVER
+   ============================================================ */
+.reaction-btn::after {
+  content: attr(title);
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%) scale(0.9);
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.reaction-btn:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+/* Tablette */
+@media (max-width: 768px) {
+  .reaction-picker-anchored {
+    min-width: 180px;
+    max-width: 240px;
+    padding: 6px 8px 8px;
+    border-radius: 12px;
+  }
+
+  .reaction-grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1px;
+  }
+
+  .reaction-btn {
+    min-height: 38px;
+    padding: 4px 1px 3px;
+  }
+
+  .reaction-btn .reaction-emoji {
+    font-size: 24px;
+  }
+
+  .reaction-btn .reaction-label {
+    font-size: 5px;
+  }
+
+  .reaction-group-label {
+    font-size: 7px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .reaction-picker-anchored {
+    min-width: 160px;
+    max-width: 200px;
+    padding: 6px 6px 8px;
+    border-radius: 10px;
+  }
+
+  .reaction-grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1px;
+  }
+
+  .reaction-btn {
+    min-height: 34px;
+    padding: 3px 1px 2px;
+    border-radius: 6px;
+  }
+
+  .reaction-btn .reaction-emoji {
+    font-size: 20px;
+  }
+
+  .reaction-btn .reaction-label {
+    display: none;
+  }
+
+  .reaction-group-label {
+    font-size: 6px;
+  }
+
+  /* Tooltip enlevé sur mobile */
+  .reaction-btn::after {
+    display: none;
+  }
+}
+
+/* Très petits mobiles */
+@media (max-width: 360px) {
+  .reaction-picker-anchored {
+    min-width: 140px;
+    max-width: 170px;
+    padding: 4px 4px 6px;
+    border-radius: 8px;
+  }
+
+  .reaction-grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1px;
+  }
+
+  .reaction-btn {
+    min-height: 30px;
+    padding: 2px 1px;
+  }
+
+  .reaction-btn .reaction-emoji {
+    font-size: 17px;
+  }
+}
+
+/* ============================================================
+   DARK / LIGHT THEME
+   ============================================================ */
+[data-theme="light"] .reaction-picker-anchored {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(24px);
+  border-color: rgba(0, 0, 0, 0.06);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.02);
+}
+
+[data-theme="light"] .reaction-group-label {
+  color: rgba(0, 0, 0, 0.12);
+}
+
+[data-theme="light"] .reaction-btn {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+[data-theme="light"] .reaction-btn:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .reaction-btn .reaction-label {
+  color: rgba(0, 0, 0, 0.12);
+}
+
+[data-theme="light"] .reaction-btn.active {
+  background: rgba(192, 132, 252, 0.06);
+}
+
+[data-theme="light"] .reaction-btn.active .reaction-label {
+  color: #C084FC;
+}
+
+[data-theme="light"] .reaction-btn::after {
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+}
+
+/* ============================================================
+   TAIL (FLÈCHE) - DARK / LIGHT
+   ============================================================ */
+[data-theme="dark"] .reaction-picker-anchored .reaction-picker-tail {
+  background: #1A1A2E;
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="light"] .reaction-picker-anchored .reaction-picker-tail {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+/* ============================================================
+   REACTIONPICKER.CSS - LIGHT MODE
+   ============================================================ */
+
+body.light-mode .reaction-picker-premium {
+  background: var(--glass-bg);
+  backdrop-filter: blur(24px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-elevated);
+}
+
+body.light-mode .reaction-picker-header-premium {
+  border-color: var(--border-color);
+}
+
+body.light-mode .reaction-picker-title-premium {
+  color: var(--text-tertiary);
+}
+
+body.light-mode .reaction-picker-close-premium {
+  background: var(--bg-input);
+  color: var(--text-tertiary);
+}
+
+body.light-mode .reaction-picker-close-premium:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+body.light-mode .reaction-option-premium {
+  background: var(--bg-input);
+  color: var(--text-secondary);
+}
+
+body.light-mode .reaction-option-premium:hover {
+  background: var(--bg-hover);
+  border-color: var(--border-color);
+}
+
+body.light-mode .reaction-option-premium.active {
+  background: rgba(139, 92, 246, 0.06);
+  border-color: var(--kpop-violet);
+}
+
+body.light-mode .reaction-option-premium .reaction-label-premium {
+  color: var(--text-muted);
+}
+
+body.light-mode .reaction-option-premium.active .reaction-label-premium {
+  color: var(--kpop-violet);
+}
+
+body.light-mode .reaction-picker-footer-premium {
+  border-color: var(--border-color);
+}
+
+body.light-mode .reaction-picker-count-premium {
+  color: var(--text-muted);
+}
+
+/* Tail (Zoro) */
+body.light-mode .reaction-picker-premium .reaction-picker-tail {
+  background: var(--glass-bg);
+  border-color: var(--glass-border);
+}

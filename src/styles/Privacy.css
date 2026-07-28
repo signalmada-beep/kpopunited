@@ -1,0 +1,346 @@
+/* ============================================================
+   PRIVACY PAGE - PREMIUM K-POP
+   ============================================================ */
+
+.privacy-page {
+  min-height: 100vh;
+  background: #0A0A0F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  position: relative;
+  overflow-y: auto;
+}
+
+.privacy-page::-webkit-scrollbar {
+  width: 5px;
+}
+
+.privacy-page::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.privacy-page::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #C084FC, #EC4899);
+  border-radius: 100px;
+}
+
+/* ============================================================
+   CONTAINER
+   ============================================================ */
+.privacy-container {
+  width: 100%;
+  max-width: 800px;
+  background: rgba(20, 20, 29, 0.85);
+  backdrop-filter: blur(30px);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 40px 40px 32px 40px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+  animation: containerSlide 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  margin: 20px auto;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes containerSlide {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.privacy-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  flex-shrink: 0;
+}
+
+.privacy-back {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  font-size: 16px;
+}
+
+.privacy-back:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.privacy-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+
+.privacy-title i {
+  color: #C084FC;
+}
+
+/* ============================================================
+   CONTENU - SCROLLABLE
+   ============================================================ */
+.privacy-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 0 12px 0;
+}
+
+.privacy-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.privacy-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.privacy-content::-webkit-scrollbar-thumb {
+  background: rgba(192, 132, 252, 0.15);
+  border-radius: 100px;
+}
+
+/* ============================================================
+   SECTIONS
+   ============================================================ */
+.privacy-section {
+  margin-bottom: 24px;
+}
+
+.privacy-section h2 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #C084FC;
+  margin: 0 0 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.privacy-section h2::before {
+  content: '';
+  width: 3px;
+  height: 20px;
+  background: linear-gradient(180deg, #C084FC, #EC4899);
+  border-radius: 4px;
+}
+
+.privacy-section p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.7;
+  margin: 0 0 8px 0;
+}
+
+.privacy-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.privacy-section ul li {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.35);
+  padding: 4px 0 4px 24px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.privacy-section ul li::before {
+  content: '•';
+  position: absolute;
+  left: 6px;
+  color: #C084FC;
+  font-weight: 700;
+}
+
+.privacy-section ul li strong {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.privacy-section a {
+  color: #C084FC;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.privacy-section a:hover {
+  color: #EC4899;
+  text-decoration: underline;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.privacy-footer {
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.privacy-footer p {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.1);
+  margin: 2px 0;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+  .privacy-container {
+    padding: 24px 20px 20px 20px;
+    max-height: 95vh;
+  }
+
+  .privacy-title {
+    font-size: 18px;
+  }
+
+  .privacy-section h2 {
+    font-size: 15px;
+  }
+
+  .privacy-section p {
+    font-size: 13px;
+  }
+
+  .privacy-section ul li {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .privacy-page {
+    padding: 12px;
+  }
+
+  .privacy-container {
+    padding: 16px 14px 14px 14px;
+    border-radius: 16px;
+    max-height: 97vh;
+  }
+
+  .privacy-header {
+    padding-bottom: 12px;
+  }
+
+  .privacy-title {
+    font-size: 16px;
+  }
+
+  .privacy-back {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .privacy-content {
+    padding: 12px 0 8px 0;
+  }
+
+  .privacy-section {
+    margin-bottom: 16px;
+  }
+
+  .privacy-section h2 {
+    font-size: 14px;
+  }
+
+  .privacy-section p {
+    font-size: 12px;
+  }
+
+  .privacy-section ul li {
+    font-size: 11px;
+    padding: 3px 0 3px 20px;
+  }
+}
+
+/* ============================================================
+   LIGHT MODE
+   ============================================================ */
+body.light-mode .privacy-page {
+  background: #F4F4F9;
+}
+
+body.light-mode .privacy-container {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(0, 0, 0, 0.04);
+}
+
+body.light-mode .privacy-title {
+  color: #1A1A2E;
+}
+
+body.light-mode .privacy-title i {
+  color: #8B5CF6;
+}
+
+body.light-mode .privacy-back {
+  background: rgba(0, 0, 0, 0.02);
+  border-color: rgba(0, 0, 0, 0.06);
+  color: rgba(0, 0, 0, 0.3);
+}
+
+body.light-mode .privacy-back:hover {
+  background: rgba(0, 0, 0, 0.06);
+  color: #1A1A2E;
+}
+
+body.light-mode .privacy-section h2 {
+  color: #8B5CF6;
+}
+
+body.light-mode .privacy-section p {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+body.light-mode .privacy-section ul li {
+  color: rgba(0, 0, 0, 0.35);
+}
+
+body.light-mode .privacy-section ul li::before {
+  color: #8B5CF6;
+}
+
+body.light-mode .privacy-section ul li strong {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+body.light-mode .privacy-section a {
+  color: #8B5CF6;
+}
+
+body.light-mode .privacy-section a:hover {
+  color: #EC4899;
+}
+
+body.light-mode .privacy-footer p {
+  color: rgba(0, 0, 0, 0.1);
+}
